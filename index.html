@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Зеленые гранты ЕС из Казахстана — Экология и этика в Horizon Europe</title>
+<meta name="description" content="Практическое руководство по экологичным и этичным грантам Horizon Europe для заявителей из Казахстана: Cluster 5, Cluster 6, этическая самопроверка, принцип DNSH, поиск партнеров.">
+<style>
+  :root{
+    --green:#2e7d32;
+    --green-dark:#1b5e20;
+    --green-light:#e8f5e9;
+    --blue:#003399;
+    --blue-light:#eef2ff;
+    --yellow:#FFCC00;
+    --bg:#f4f9f4;
+    --text:#1a2e1a;
+    --gray:#4a5d4a;
+    --line:#dce8dc;
+    --white:#fff;
+    --shadow:0 4px 20px rgba(27,94,32,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:70px}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+    color:var(--text);background:var(--bg);line-height:1.65;font-size:16px;
+  }
+  .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(135deg,#1b5e20 0%,#2e7d32 100%);
+    color:#fff;padding:80px 0 70px;position:relative;overflow:hidden;
+  }
+  .hero::before{
+    content:'';position:absolute;right:-120px;top:-120px;width:420px;height:420px;
+    border-radius:50%;background:radial-gradient(circle,rgba(255,204,0,.15),transparent 70%);
+  }
+  .hero::after{
+    content:'';position:absolute;left:0;bottom:0;width:100%;height:5px;
+    background:linear-gradient(90deg,var(--yellow),#a5d6a7,var(--yellow));
+  }
+  .hero .container{position:relative;z-index:2}
+  .hero .flag{display:inline-flex;gap:6px;margin-bottom:18px}
+  .hero .flag span{width:9px;height:9px;border-radius:50%;background:#a5d6a7;display:block;opacity:.9}
+  .hero h1{font-size:clamp(28px,4.4vw,46px);line-height:1.15;margin-bottom:16px;letter-spacing:-.5px}
+  .hero p{font-size:clamp(16px,2vw,19px);color:#c8e6c9;max-width:720px;margin-bottom:28px}
+  .btn{
+    display:inline-block;background:var(--yellow);color:var(--green-dark);
+    padding:14px 28px;border-radius:10px;font-weight:700;text-decoration:none;
+    font-size:16px;transition:transform .15s,box-shadow .15s;box-shadow:0 6px 20px rgba(255,204,0,.3);
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(255,204,0,.4)}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35);box-shadow:none;margin-left:10px}
+  .btn.ghost:hover{background:rgba(255,255,255,.1)}
+
+  /* NAV */
+  nav{position:sticky;top:0;background:#fff;box-shadow:0 2px 14px rgba(27,94,32,.08);z-index:100}
+  nav .container{display:flex;gap:4px;overflow-x:auto;padding:10px 20px;scrollbar-width:none}
+  nav .container::-webkit-scrollbar{display:none}
+  nav a{
+    white-space:nowrap;padding:8px 14px;border-radius:8px;color:var(--green-dark);
+    text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;
+  }
+  nav a:hover{background:var(--green-light)}
+
+  /* SECTIONS */
+  section{padding:64px 0}
+  section.alt{background:#fff}
+  .sec-head{margin-bottom:32px}
+  .sec-num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:38px;height:38px;border-radius:10px;background:var(--green);color:#fff;
+    font-weight:800;font-size:18px;margin-bottom:14px;
+  }
+  h2{font-size:clamp(22px,3vw,30px);line-height:1.25;margin-bottom:10px;letter-spacing:-.3px}
+  .sec-head p{color:var(--gray);max-width:780px}
+  h3{font-size:18px;margin-bottom:8px}
+
+  /* CARDS */
+  .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{
+    background:#fff;border-radius:14px;padding:24px;box-shadow:var(--shadow);
+    border:1px solid var(--line);border-top:4px solid var(--green);
+  }
+  .card.yellow{border-top-color:var(--yellow)}
+  .card.blue{border-top-color:var(--blue)}
+  .card p{color:var(--gray);font-size:15px}
+  .card ul{margin:10px 0 0 18px;color:var(--gray);font-size:15px}
+  .card li{margin-bottom:6px}
+  .tag{
+    display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;
+    background:var(--green-light);color:var(--green-dark);margin-bottom:10px;letter-spacing:.3px;
+  }
+  .tag.y{background:#fff6d6;color:#8a6d00}
+  .tag.b{background:var(--blue-light);color:var(--blue)}
+  .tag.r{background:#fee2e2;color:#991b1b}
+
+  /* STEPS */
+  .steps{counter-reset:step;list-style:none}
+  .steps li{
+    position:relative;padding:18px 20px 18px 64px;background:#fff;border-radius:12px;
+    border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);
+  }
+  .steps li::before{
+    counter-increment:step;content:counter(step);
+    position:absolute;left:18px;top:18px;width:30px;height:30px;border-radius:50%;
+    background:var(--green);color:#fff;font-weight:800;font-size:14px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .steps li strong{display:block;margin-bottom:4px}
+  .steps li span{color:var(--gray);font-size:15px}
+
+  /* TIMELINE */
+  .timeline{position:relative;padding-left:34px}
+  .timeline::before{content:'';position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .tl-item{position:relative;margin-bottom:22px}
+  .tl-item::before{
+    content:'';position:absolute;left:-30px;top:6px;width:14px;height:14px;border-radius:50%;
+    background:var(--green);border:3px solid #fff;box-shadow:0 0 0 2px var(--green);
+  }
+  .tl-item h3{font-size:16px;margin-bottom:4px}
+  .tl-item p{color:var(--gray);font-size:15px}
+  .tl-day{font-size:12px;font-weight:800;color:var(--green-dark);text-transform:uppercase;letter-spacing:.5px}
+
+  /* CHECKLIST */
+  .progress-wrap{background:var(--line);border-radius:20px;height:14px;overflow:hidden;margin:18px 0 8px}
+  #progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--yellow));transition:width .35s ease}
+  .progress-text{font-size:14px;color:var(--gray);margin-bottom:22px;font-weight:600}
+  .checklist label{
+    display:flex;gap:14px;align-items:flex-start;padding:14px 18px;background:#fff;
+    border-radius:10px;margin-bottom:10px;cursor:pointer;border:1px solid var(--line);
+    transition:border-color .15s,background .15s;
+  }
+  .checklist label:hover{border-color:#b8d8b8;background:#f7fcf7}
+  .checklist input{width:20px;height:20px;margin-top:2px;accent-color:var(--green);flex-shrink:0;cursor:pointer}
+  .checklist span{font-size:15px}
+  .checklist input:checked ~ span{text-decoration:line-through;color:#9aa3b2}
+
+  /* FAQ */
+  details{background:#fff;border-radius:10px;border:1px solid var(--line);margin-bottom:10px;padding:0 20px;box-shadow:var(--shadow)}
+  summary{cursor:pointer;padding:16px 30px 16px 0;font-weight:700;list-style:none;position:relative;font-size:15px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+';position:absolute;right:0;top:12px;font-size:24px;color:var(--green);transition:transform .2s;line-height:1}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{padding-bottom:18px;color:var(--gray);font-size:15px}
+
+  /* NOTICE */
+  .notice{
+    background:#e8f5e9;border-left:4px solid var(--green);padding:16px 20px;
+    border-radius:8px;font-size:15px;color:#1b5e20;margin:20px 0;
+  }
+  .notice b{color:#0d3d0d}
+
+  /* FOOTER */
+  footer{background:var(--green-dark);color:#c8e6c9;padding:44px 0;text-align:center;font-size:14px}
+  footer strong{color:#fff}
+  footer a{color:var(--yellow);text-decoration:none}
+  footer .small{margin-top:10px;font-size:12.5px;opacity:.75}
+
+  @media(max-width:640px){
+    .hero{padding:60px 0 54px}
+    section{padding:48px 0}
+    .btn.ghost{margin-left:0;margin-top:10px}
+    .steps li{padding-left:58px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="flag"><span></span><span></span><span></span><span></span><span></span></div>
+    <h1>Зеленые гранты ЕС из Казахстана</h1>
+    <p>Практическое руководство по экологичным и этичным возможностям Horizon Europe: климат, биоразнообразие, циркулярная экономика и обязательные этические стандарты для вашего проекта.</p>
+    <a href="#checklist" class="btn">Открыть чек-лист</a>
+    <a href="#eco-clusters" class="btn ghost">Эко-кластеры</a>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="#intro">Обзор</a>
+    <a href="#eligibility">Право на участие</a>
+    <a href="#eco-clusters">Эко-кластеры (5 и 6)</a>
+    <a href="#ethics">Этика и DNSH</a>
+    <a href="#partners">Поиск партнеров</a>
+    <a href="#eval">Оценка</a>
+    <a href="#checklist">Чек-лист</a>
+    <a href="#faq">Вопросы</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 0. INTRO -->
+  <section id="intro">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-num">0</div>
+        <h2>Почему экология и этика — это не «бонус», а требование</h2>
+        <p>В Horizon Europe экологичность и этичность встроены в саму структуру конкурсов. Проекты, которые не соответствуют «зеленым» приоритетам и этическим нормам, не получают финансирования. Для заявителя из Казахстана это одновременно и вызов, и преимущество: ваша уникальная экспертиза в решении экологических проблем региона становится востребованным активом.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Факт</span>
+          <h3>Огромные бюджеты на «зелень»</h3>
+          <p>Только в Cluster 5 на 2026 год доступно <b>€466,7 млн</b> на климат, энергетику и мобильность[reference:7]. В Cluster 6 на 2026–2027 годы запланировано около <b>€677 млн</b> и <b>€632 млн</b> соответственно[reference:8].</p>
+        </div>
+        <div class="card yellow">
+          <span class="tag y">Тренд</span>
+          <h3>Казахстан в фокусе</h3>
+          <p>Казахстанские организации уже получают финансирование в эко-проектах: от устойчивых цепочек поставок титана до климатических решений. Ваш проект может стать следующим.</p>
+        </div>
+        <div class="card blue">
+          <span class="tag b">Обязательно</span>
+          <h3>Этика с первого слайда</h3>
+          <p>Все заявки проходят <b>этическую оценку (ethics appraisal)</b>. Принцип <b>«Не навреди» (DNSH)</b> и защита окружающей среды — сквозные требования, а не опция[reference:9][reference:10].</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. ELIGIBILITY -->
+  <section id="eligibility" class="alt">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-num">1</div>
+        <h2>Проверка права на участие: ваш «зеленый» маршрут</h2>
+        <p>Для заявителя из Казахстана правила те же, что и в общем случае, но с поправкой на эко-тематику.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Путь A</span>
+          <h3>Консорциум (основной путь)</h3>
+          <p>Минимум <b>3 независимые организации из 3 стран</b>, из них <b>≥1 из EU Member State</b>. Вы — полноценный <b>beneficiary</b> с собственным бюджетом. Ваша экспертиза в локальных экологических проблемах (Арал, Каспий, степи, горы) — сильный аргумент для партнеров.</p>
+        </div>
+        <div class="card yellow">
+          <span class="tag y">Путь B</span>
+          <h3>Ассоциированная страна</h3>
+          <p>Казахстан <b>пока не</b> ассоциирован, но соглашение готовится. Как только оно вступит в силу, вы будете приравнены к странам ЕС. Подавайтесь уже сейчас, чтобы иметь проекты «в портфеле» к моменту ассоциации.</p>
+        </div>
+        <div class="card blue">
+          <span class="tag b">Путь C</span>
+          <h3>MSCA и индивидуальные исследователи</h3>
+          <p>Для ученых-экологов и климатологов существуют схемы <b>MSCA</b>, где можно участвовать индивидуально или через университет. Это отдельная дорога для тех, кто хочет заниматься наукой, а не координацией консорциума.</p>
+        </div>
+      </div>
+      <div class="notice">
+        <b>Проверяйте Eligibility conditions!</b> В некоторых эко-конкурсах (например, связанных с восстановлением конкретных экосистем) могут быть ограничения по странам или типам организаций. Всегда читайте описание Topic.
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ECO CLUSTERS -->
+  <section id="eco-clusters">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-num">2</div>
+        <h2>Эко-кластеры: где искать «зеленые» деньги</h2>
+        <p>Два ключевых кластера Horizon Europe для экологических проектов. Ориентируйтесь на них при поиске конкурсов.</p>
+      </div>
+
+      <div class="grid" style="margin-bottom:24px">
+        <div class="card">
+          <span class="tag">Cluster 5</span>
+          <h3>Климат, энергетика, мобильность</h3>
+          <p><b>Фокус:</b> климатические науки и адаптация, чистая энергетика, устойчивый транспорт, «умные» города. Бюджет на 2026 год — <b>€466,7 млн</b>[reference:11].</p>
+          <p><b>Примеры тем:</b> Климатические услуги и сценарии, улавливание CO2, интеграция возобновляемых источников, устойчивые батареи.</p>
+          <p><b>Платформа для поиска партнеров:</b> <b>GREENET Partner Search Tool</b> — международная сеть для Cluster 5, работает до конца 2027 года[reference:12].</p>
+        </div>
+        <div class="card yellow">
+          <span class="tag y">Cluster 6</span>
+          <h3>Продовольствие, биоэкономика, окружающая среда</h3>
+          <p><b>Фокус:</b> биоразнообразие, циркулярная экономика, нулевое загрязнение, устойчивое сельское хозяйство, водные ресурсы. Бюджет на 2026–2027 — <b>€677 млн</b> и <b>€632 млн</b>[reference:13].</p>
+          <p><b>Примеры тем:</b> Восстановление экосистем, «живые лаборатории» (living labs) для природы, борьба с пластиком и химикатами, устойчивые цепочки поставок еды.</p>
+          <p><b>Платформа для поиска партнеров:</b> <b>CARE4BIO</b> — брокерские события и матчмейкинг для проектов по природе и биоразнообразию[reference:14].</p>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom:16px">Актуальные дедлайны (ориентировочно)</h3>
+      <ol class="steps">
+        <li>
+          <strong>Cluster 5: климат и энергетика</strong>
+          <span>Ключевые конкурсы закрываются <b>31 марта 2026</b> (энергетика) и <b>14 апреля 2026</b> (транспорт). Следите за обновлениями на портале[reference:15].</span>
+        </li>
+        <li>
+          <strong>Cluster 6: биоразнообразие и нулевое загрязнение</strong>
+          <span>Основной дедлайн для многих тем — <b>17 сентября 2026</b>. Открытие — 17 апреля 2026[reference:16].</span>
+        </li>
+        <li>
+          <strong>Двухэтапные конкурсы (Two-Stage)</strong>
+          <span>Первый этап может закрываться в апреле 2026, второй — в сентябре 2026. Внимательно читайте условия конкретного Topic[reference:17].</span>
+        </li>
+      </ol>
+      <div class="notice">
+        <b>Совет:</b> Не ограничивайтесь одним кластером. Экологический проект может подходить под темы из разных кластеров, если он затрагивает, например, и климат, и устойчивое сельское хозяйство.
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ETHICS -->
+  <section id="ethics" class="alt">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-num">3</div>
+        <h2>Этика и принцип «Не навреди» (DNSH)</h2>
+        <p>В Horizon Europe этика — это не формальность, а критерий качества. Для экологических проектов ключевое значение имеют два инструмента: <b>Ethics Self-Assessment</b> и <b>DNSH</b>.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Шаг 1</span>
+          <h3>Этическая самопроверка (Ethics Self-Assessment)</h3>
+          <p>Все заявители обязаны заполнить <b>Ethics Issues Table</b> (Раздел 12 Horizon Europe Programme Guide)[reference:18]. Для эко-проектов особое внимание уделите:</p>
+          <ul>
+            <li><b>Защита окружающей среды:</b> как ваш проект повлияет на экосистемы?</li>
+            <li><b>Здоровье человека:</b> нет ли риска от химикатов или загрязнения?</li>
+            <li><b>Благополучие животных:</b> если используются животные, соблюдены ли принципы 3R?</li>
+            <li><b>Справедливое распределение выгод:</b> получат ли местные сообщества пользу от проекта?</li>
+          </ul>
+        </div>
+        <div class="card yellow">
+          <span class="tag y">Шаг 2</span>
+          <h3>Принцип DNSH (Do No Significant Harm)</h3>
+          <p>Ваш проект не должен наносить значительного ущерба <b>шести экологическим целям</b> ЕС[reference:19]:</p>
+          <ul>
+            <li>Смягчение изменения климата</li>
+            <li>Адаптация к изменению климата</li>
+            <li>Устойчивое использование водных и морских ресурсов</li>
+            <li>Циркулярная экономика (отходы и переработка)</li>
+            <li>Предотвращение загрязнения воздуха, воды и почвы</li>
+            <li>Защита и восстановление биоразнообразия</li>
+          </ul>
+          <p style="margin-top:10px;">Заполните таблицу DNSH в Part B. Если ваш проект использует, например, химикаты, обоснуйте, почему это безопасно.</p>
+        </div>
+      </div>
+      <div class="notice">
+        <b>Практический вывод:</b> Начните готовить этическую часть <b>до</b> написания основного текста. Если выявится серьезная этическая проблема (например, проект может навредить редкому виду), лучше скорректировать идею на раннем этапе.
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PARTNERS -->
+  <section id="partners">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-num">4</div>
+        <h2>Поиск партнеров: специализированные «зеленые» платформы</h2>
+        <p>Общие инструменты (Partner Search на портале, CORDIS, NCP) работают, но для эко-тематики есть более точные каналы.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Cluster 5</span>
+          <h3>GREENET Partner Search Tool</h3>
+          <p>Международная платформа, объединяющая координаторов и партнеров по темам климата, энергетики и мобильности. Уже более <b>1100 участников</b> со всего мира. Работает до декабря 2027 года[reference:20].</p>
+          <p><b>Ссылка:</b> <a href="https://www.greenet-partnersearch.eu/" target="_blank" rel="noopener" style="color:var(--green);font-weight:600;">greenet-partnersearch.eu</a> (примерный адрес, уточняйте на портале NCP).</p>
+        </div>
+        <div class="card yellow">
+          <span class="tag y">Cluster 6 / Природа</span>
+          <h3>CARE4BIO Brokerage Events</h3>
+          <p>Онлайн-мероприятия для поиска партнеров под конкурсы по биоразнообразию и природным решениям (например, NATURE Call). Регистрация через платформу <b>B2Match</b>. Позволяют проводить двусторонние встречи один-на-один[reference:21].</p>
+          <p><b>Как найти:</b> Следите за анонсами на портале NCP Казахстана и на сайте CARE4BIO.</p>
+        </div>
+        <div class="card blue">
+          <span class="tag b">Общий инструмент</span>
+          <h3>Partner Search на EU Portal</h3>
+          <p>Не забывайте про официальный раздел <b>Partner Search</b> на портале Funding & Tenders. Фильтруйте по кластеру и типу организации. Публикуйте собственный профиль (Expression of Interest) с акцентом на вашу эко-экспертизу.</p>
+        </div>
+      </div>
+      <div class="notice">
+        <b>Совет по питчу:</b> В первом письме координатору не пишите «мы хотим участвовать». Напишите: «Наша организация обладает данными/экспертизой по [конкретная экосистема/проблема] в Казахстане, что может усилить Work Package по [задача]. Наш PIC — [номер]».
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. EVAL -->
+  <section id="eval" class="alt">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-num">5</div>
+        <h2>Оценка: как «зеленость» и этика влияют на баллы</h2>
+        <p>Экология и этика пронизывают все три критерия оценки. Игнорировать их — значит потерять баллы.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Excellence</span>
+          <h3>Превосходство</h3>
+          <p>Насколько ваша эко-идея выходит за рамки <b>state-of-the-art</b>? Четко ли обоснована методология? Для этики: соответствует ли дизайн исследования этическим принципам (например, информированное согласие, если затрагиваются сообщества).</p>
+        </div>
+        <div class="card yellow">
+          <span class="tag y">Impact</span>
+          <h3>Воздействие</h3>
+          <p>Как проект поможет достичь <b>EU Green Deal</b>, стратегии по биоразнообразию или циркулярной экономике? Опишите <b>pathways towards impact</b> с измеримыми KPI. Экологический эффект должен быть конкретным и проверяемым.</p>
+        </div>
+        <div class="card blue">
+          <span class="tag b">Implementation</span>
+          <h3>Реализация</h3>
+          <p>Реалистичен ли план? Учтены ли этические риски и меры по их снижению? Есть ли в команде этический советник или ответственный за DNSH? Это показывает зрелость консорциума.</p>
+        </div>
+      </div>
+      <div class="notice">
+        <b>Порог:</b> Для RIA/IA — не менее <b>10 из 15</b> баллов. Этическая часть не дает прямых баллов, но ее отсутствие или слабость могут привести к снижению оценки или отзыву заявки на этапе этической проверки.
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CHECKLIST -->
+  <section id="checklist">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-num">6</div>
+        <h2>Чек-лист «зеленого» заявителя</h2>
+        <p>Отмечайте шаги — прогресс сохраняется в браузере.</p>
+      </div>
+
+      <div class="progress-wrap"><div id="progress-bar"></div></div>
+      <div class="progress-text" id="progress-text">0 из 12 (0%)</div>
+
+      <div class="checklist">
+        <label><input type="checkbox" id="g1"><span>Создан EU Login и подтверждена почта</span></label>
+        <label><input type="checkbox" id="g2"><span>Организация зарегистрирована в Participant Register, получен PIC</span></label>
+        <label><input type="checkbox" id="g3"><span>Назначен LEAR</span></label>
+        <label><input type="checkbox" id="g4"><span>Изучены Work Programme 2026–2027 для Cluster 5 и/или Cluster 6</span></label>
+        <label><input type="checkbox" id="g5"><span>Найдены 2–3 подходящих эко-Topic, проверены Eligibility conditions</span></label>
+        <label><input type="checkbox" id="g6"><span>Определен Type of Action (RIA / IA / CSA) и бюджет</span></label>
+        <label><input type="checkbox" id="g7"><span>Начата <b>Ethics Self-Assessment</b> (Ethics Issues Table)</span></label>
+        <label><input type="checkbox" id="g8"><span>Проанализирован проект на соответствие <b>DNSH</b> (6 целей)</span></label>
+        <label><input type="checkbox" id="g9"><span>Начаты переговоры с партнерами (GREENET / CARE4BIO / Partner Search)</span></label>
+        <label><input type="checkbox" id="g10"><span>Определена роль в консорциуме и ваш вклад в эко-результаты</span></label>
+        <label><input type="checkbox" id="g11"><span>Подготовлен черновик раздела Impact с экологическими KPI</span></label>
+        <label><input type="checkbox" id="g12"><span>Проверены формальные требования Part B (шрифт, поля, лимит страниц)</span></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ -->
+  <section id="faq" class="alt">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-num">7</div>
+        <h2>Частые вопросы об эко- и этичных грантах</h2>
+      </div>
+
+      <details>
+        <summary>Мой проект не про климат, а про, например, устойчивое сельское хозяйство. Мне подходит Cluster 5?</summary>
+        <p>Скорее всего, вам в <b>Cluster 6</b> («Продовольствие, биоэкономика, природные ресурсы, сельское хозяйство и окружающая среда»). Cluster 5 больше про климатические науки, энергетику и транспорт. Но если ваш проект на стыке (например, климатически устойчивое земледелие), проверьте оба кластера.</p>
+      </details>
+
+      <details>
+        <summary>Что такое DNSH и обязательно ли это?</summary>
+        <p><b>DNSH (Do No Significant Harm)</b> — принцип «Не навреди». Да, это обязательное требование для проектов, связанных с экологией и климатом. Вам нужно будет заполнить таблицу, показывающую, что ваш проект не наносит значительного ущерба шести экологическим целям ЕС. Это часть этической и технической оценки[reference:22].</p>
+      </details>
+
+      <details>
+        <summary>Где найти этические требования для моего проекта?</summary>
+        <p>Основной документ — <b>Horizon Europe Programme Guide (Раздел 12)</b> и руководство <b>«How to complete your ethics self-assessment»</b>. Также полезен <b>Guide on Ethics Appraisal Procedure in Horizon Europe</b>. Ссылки на них обычно дает NCP Казахстана при консультации.</p>
+      </details>
+
+      <details>
+        <summary>Обязательно ли иметь партнера из ЕС для эко-проекта?</summary>
+        <p>Да, для большинства конкурсов RIA/IA в консорциуме должна быть <b>как минимум одна организация из EU Member State</b> (или Associated Country). Ваша казахстанская организация может быть beneficiary, но «европейское плечо» необходимо по формальным правилам.</p>
+      </details>
+
+      <details>
+        <summary>Может ли индивидуальный исследователь-эколог получить грант?</summary>
+        <p>В «классических» конкурсах RIA/IA — нет, нужен консорциум. Но для индивидуальных исследователей есть схема <b>MSCA (Marie Skłodowska-Curie Actions)</b>, в рамках которой можно подаваться через университет или исследовательский институт. Это отдельная возможность.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <strong>Зеленые гранты ЕС из Казахстана</strong> — экология и этика в Horizon Europe
+    <div class="small">Неофициальный информационный ресурс. Не является сайтом Европейской комиссии. Актуальные правила, дедлайны и требования всегда проверяйте на <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home" target="_blank" rel="noopener">EU Funding &amp; Tenders Portal</a> и у National Contact Point Казахстана.</div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var boxes = document.querySelectorAll('#checklist input[type="checkbox"]');
+    var bar = document.getElementById('progress-bar');
+    var text = document.getElementById('progress-text');
+
+    function update() {
+      var total = boxes.length;
+      var done = 0;
+      boxes.forEach(function (b) { if (b.checked) done++; });
+      var pct = Math.round(done / total * 100);
+      bar.style.width = pct + '%';
+      text.textContent = done + ' из ' + total + ' (' + pct + '%)';
+    }
+
+    boxes.forEach(function (b) {
+      var key = 'green_grants_kz_' + b.id;
+      try { b.checked = localStorage.getItem(key) === '1'; } catch (e) {}
+      b.addEventListener('change', function () {
+        try { localStorage.setItem(key, b.checked ? '1' : '0'); } catch (e) {}
+        update();
+      });
+    });
+
+    update();
+  })();
+</script>
+</body>
+</html>
