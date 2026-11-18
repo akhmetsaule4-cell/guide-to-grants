@@ -1,473 +1,681 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PK2QVQQ');</script>
+<!-- End Google Tag Manager -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Зеленые гранты ЕС из Казахстана — Экология и этика в Horizon Europe</title>
-<meta name="description" content="Практическое руководство по экологичным и этичным грантам Horizon Europe для заявителей из Казахстана: Cluster 5, Cluster 6, этическая самопроверка, принцип DNSH, поиск партнеров.">
+<title>🌿 Зелёные гранты ЕС — Навигатор по программе «Горизонт Европа»</title>
+<meta name="description" content="Интерактивный навигатор по экологичным грантам ЕС. Бюджет, этика, проект переработки подгузников, технология i-Foria и поиск партнеров.">
 <style>
   :root{
-    --green:#2e7d32;
-    --green-dark:#1b5e20;
-    --green-light:#e8f5e9;
-    --blue:#003399;
-    --blue-light:#eef2ff;
-    --yellow:#FFCC00;
-    --bg:#f4f9f4;
-    --text:#1a2e1a;
-    --gray:#4a5d4a;
-    --line:#dce8dc;
+    --green:#0a7d38;
+    --green-deep:#06421d;
+    --lime:#ccff00; 
+    --lime-hover:#b3e600;
+    --gold:#ffb800;
+    --cream:#f7fbf4; 
+    --ink:#0a1f10;
+    --gray:#3e5444;
+    --line:#d4e3d7;
     --white:#fff;
-    --shadow:0 4px 20px rgba(27,94,32,.08);
+    --shadow:0 10px 30px rgba(10,125,56,.08);
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:70px}
+  html{scroll-behavior:smooth;scroll-padding-top:110px}
+  
   body{
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
-    color:var(--text);background:var(--bg);line-height:1.65;font-size:16px;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--cream);line-height:1.7;font-size:21px; 
+    -webkit-font-smoothing:antialiased;
   }
-  .container{max-width:1100px;margin:0 auto;padding:0 20px}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
 
   /* HERO */
   .hero{
-    background:linear-gradient(135deg,#1b5e20 0%,#2e7d32 100%);
-    color:#fff;padding:80px 0 70px;position:relative;overflow:hidden;
+    background:radial-gradient(circle at 80% 0%,#149f4f 0%,var(--green-deep) 55%,#02160a 100%);
+    color:#fff;padding:80px 0 100px;position:relative;overflow:hidden;
   }
   .hero::before{
-    content:'';position:absolute;right:-120px;top:-120px;width:420px;height:420px;
-    border-radius:50%;background:radial-gradient(circle,rgba(255,204,0,.15),transparent 70%);
+    content:'';position:absolute;right:-150px;top:-150px;width:600px;height:600px;
+    border-radius:50%;background:radial-gradient(circle,rgba(204,255,0,.25),transparent 65%);
+    filter:blur(30px);animation:pulse 7s ease-in-out infinite;
   }
-  .hero::after{
-    content:'';position:absolute;left:0;bottom:0;width:100%;height:5px;
-    background:linear-gradient(90deg,var(--yellow),#a5d6a7,var(--yellow));
-  }
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.1);opacity:1}}
   .hero .container{position:relative;z-index:2}
-  .hero .flag{display:inline-flex;gap:6px;margin-bottom:18px}
-  .hero .flag span{width:9px;height:9px;border-radius:50%;background:#a5d6a7;display:block;opacity:.9}
-  .hero h1{font-size:clamp(28px,4.4vw,46px);line-height:1.15;margin-bottom:16px;letter-spacing:-.5px}
-  .hero p{font-size:clamp(16px,2vw,19px);color:#c8e6c9;max-width:720px;margin-bottom:28px}
-  .btn{
-    display:inline-block;background:var(--yellow);color:var(--green-dark);
-    padding:14px 28px;border-radius:10px;font-weight:700;text-decoration:none;
-    font-size:16px;transition:transform .15s,box-shadow .15s;box-shadow:0 6px 20px rgba(255,204,0,.3);
+  .badge{
+    display:inline-flex;align-items:center;gap:12px;background:rgba(204,255,0,.15);
+    border:2px solid rgba(204,255,0,.4);color:var(--lime);
+    padding:10px 22px;border-radius:100px;font-size:17px;font-weight:800;
+    letter-spacing:.5px;margin-bottom:30px; text-transform: uppercase;
   }
-  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(255,204,0,.4)}
-  .btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35);box-shadow:none;margin-left:10px}
-  .btn.ghost:hover{background:rgba(255,255,255,.1)}
+  .badge .dot{width:12px;height:12px;border-radius:50%;background:var(--lime);animation:blink 1.5s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+  .hero h1{
+    font-size:clamp(42px,7vw,82px);line-height:1.05;letter-spacing:-2.5px;
+    margin-bottom:24px;font-weight:900;
+  }
+  .hero h1 .hl{color:var(--lime);display:inline-block}
+  .hero p.lead{
+    font-size:clamp(22px,2.5vw,28px);color:#d4e8d9;max-width:850px;
+    margin-bottom:40px;line-height:1.45;font-weight:400;
+  }
+  
+  .btn{
+    display:inline-flex;align-items:center;gap:12px;background:var(--lime);color:var(--green-deep);
+    padding:20px 40px;border-radius:16px;font-weight:900;text-decoration:none;
+    font-size:22px;transition:transform .2s,box-shadow .2s;box-shadow:0 12px 35px rgba(204,255,0,.3);
+    border:none;cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(204,255,0,.5); background:var(--lime-hover);}
+  .btn.ghost{background:transparent;color:#fff;border:2.5px solid rgba(255,255,255,.3);box-shadow:none}
+  .btn.ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
 
-  /* NAV */
-  nav{position:sticky;top:0;background:#fff;box-shadow:0 2px 14px rgba(27,94,32,.08);z-index:100}
-  nav .container{display:flex;gap:4px;overflow-x:auto;padding:10px 20px;scrollbar-width:none}
+  /* NAV - ЯРКИЕ ВКЛАДКИ */
+  nav{
+    position:sticky;top:0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);
+    border-bottom:2px solid var(--line);z-index:100;padding:16px 0;
+    box-shadow:0 4px 20px rgba(0,0,0,.04);
+  }
+  nav .container{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;}
   nav .container::-webkit-scrollbar{display:none}
   nav a{
-    white-space:nowrap;padding:8px 14px;border-radius:8px;color:var(--green-dark);
-    text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;
+    display:inline-flex;align-items:center;gap:10px;white-space:nowrap;
+    padding:14px 24px;border-radius:100px;color:var(--green-deep);
+    text-decoration:none;font-size:18px;font-weight:800;
+    background:#f0f5f1;transition:all .2s; border:2px solid transparent;
   }
-  nav a:hover{background:var(--green-light)}
+  nav a:hover, nav a.active{background:var(--lime);color:var(--ink);transform:translateY(-2px); box-shadow: 0 6px 15px rgba(204,255,0,.4);}
+  nav a .ico{font-size:22px}
 
   /* SECTIONS */
-  section{padding:64px 0}
+  section{padding:90px 0}
   section.alt{background:#fff}
-  .sec-head{margin-bottom:32px}
-  .sec-num{
-    display:inline-flex;align-items:center;justify-content:center;
-    width:38px;height:38px;border-radius:10px;background:var(--green);color:#fff;
-    font-weight:800;font-size:18px;margin-bottom:14px;
+  .sec-head{margin-bottom:50px;max-width:900px}
+  .kicker{
+    display:inline-flex;align-items:center;gap:10px;font-size:16px;font-weight:900;
+    text-transform:uppercase;letter-spacing:1.5px;color:var(--green);margin-bottom:16px;
   }
-  h2{font-size:clamp(22px,3vw,30px);line-height:1.25;margin-bottom:10px;letter-spacing:-.3px}
-  .sec-head p{color:var(--gray);max-width:780px}
-  h3{font-size:18px;margin-bottom:8px}
+  h2{font-size:clamp(34px,4.5vw,56px);line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px;font-weight:900}
+  h3{font-size:26px;margin-bottom:12px;font-weight:800;letter-spacing:-.5px}
+  .sec-head p{color:var(--gray);font-size:22px;max-width:800px;line-height:1.6}
+  
+  /* PROJECT CARD */
+  .project-wrapper {
+    background: #fff; border: 3px solid var(--green); border-radius: 30px; padding: 50px;
+    box-shadow: 0 20px 50px rgba(10,125,56,.1); margin-bottom: 40px;
+    position: relative; overflow: hidden;
+  }
+  .project-wrapper::before {
+    content: 'ПРОЕКТ'; position: absolute; top: 30px; right: -40px; transform: rotate(45deg);
+    background: var(--lime); color: var(--ink); font-weight: 900; font-size: 18px; padding: 10px 60px;
+  }
+  .project-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 40px; }
+  .p-stat { background: var(--cream); padding: 25px; border-radius: 20px; border: 2px solid var(--line); text-align: center; }
+  .p-stat .num { font-size: 42px; font-weight: 900; color: var(--green); line-height: 1; margin-bottom: 10px; }
+  .p-stat .lbl { font-size: 18px; font-weight: 700; color: var(--gray); line-height: 1.3; }
+  
+  /* Текст Part B */
+  .part-b-box {
+    background: #f4f7f4; border-left: 8px solid var(--green); padding: 40px; border-radius: 0 20px 20px 0;
+    font-family: 'Georgia', serif; font-size: 20px; line-height: 1.8; color: #111; margin: 40px 0;
+  }
+  .part-b-box h4 { font-family: -apple-system, sans-serif; font-size: 24px; color: var(--green-deep); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;}
+  .part-b-box strong { font-family: -apple-system, sans-serif; color: var(--green-deep); }
+  
+  .highlight-box {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5); border: 2px solid var(--green);
+    padding: 30px; border-radius: 20px; font-size: 20px; margin: 30px 0; color: #064e3b;
+  }
 
   /* CARDS */
-  .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
   .card{
-    background:#fff;border-radius:14px;padding:24px;box-shadow:var(--shadow);
-    border:1px solid var(--line);border-top:4px solid var(--green);
+    background:#fff;border-radius:24px;padding:36px;border:2px solid var(--line);
+    transition:transform .2s, box-shadow .2s;
   }
-  .card.yellow{border-top-color:var(--yellow)}
-  .card.blue{border-top-color:var(--blue)}
-  .card p{color:var(--gray);font-size:15px}
-  .card ul{margin:10px 0 0 18px;color:var(--gray);font-size:15px}
-  .card li{margin-bottom:6px}
-  .tag{
-    display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;
-    background:var(--green-light);color:var(--green-dark);margin-bottom:10px;letter-spacing:.3px;
-  }
-  .tag.y{background:#fff6d6;color:#8a6d00}
-  .tag.b{background:var(--blue-light);color:var(--blue)}
-  .tag.r{background:#fee2e2;color:#991b1b}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow); border-color:var(--green);}
+  .card .ico{font-size:48px;margin-bottom:18px;display:block}
+  .card p{color:var(--gray);font-size:19px;line-height:1.65}
+  .card ul{margin:16px 0 0 24px;color:var(--gray);font-size:19px;line-height:1.65}
+  .card li{margin-bottom:10px}
 
-  /* STEPS */
-  .steps{counter-reset:step;list-style:none}
-  .steps li{
-    position:relative;padding:18px 20px 18px 64px;background:#fff;border-radius:12px;
-    border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);
+  /* BUDGET TABLE */
+  .budget-table {
+    width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 18px; background: #fff; border-radius: 12px; overflow: hidden;
   }
-  .steps li::before{
-    counter-increment:step;content:counter(step);
-    position:absolute;left:18px;top:18px;width:30px;height:30px;border-radius:50%;
-    background:var(--green);color:#fff;font-weight:800;font-size:14px;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .steps li strong{display:block;margin-bottom:4px}
-  .steps li span{color:var(--gray);font-size:15px}
-
-  /* TIMELINE */
-  .timeline{position:relative;padding-left:34px}
-  .timeline::before{content:'';position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--line)}
-  .tl-item{position:relative;margin-bottom:22px}
-  .tl-item::before{
-    content:'';position:absolute;left:-30px;top:6px;width:14px;height:14px;border-radius:50%;
-    background:var(--green);border:3px solid #fff;box-shadow:0 0 0 2px var(--green);
-  }
-  .tl-item h3{font-size:16px;margin-bottom:4px}
-  .tl-item p{color:var(--gray);font-size:15px}
-  .tl-day{font-size:12px;font-weight:800;color:var(--green-dark);text-transform:uppercase;letter-spacing:.5px}
+  .budget-table th, .budget-table td { padding: 16px; text-align: left; border-bottom: 1px solid var(--line); }
+  .budget-table th { background: var(--green); color: #fff; font-weight: 800; }
+  .budget-table tr:hover { background: #f7fbf4; }
+  .budget-table .total-row { font-weight: 900; background: #e8f5e9; color: var(--green-deep); }
 
   /* CHECKLIST */
-  .progress-wrap{background:var(--line);border-radius:20px;height:14px;overflow:hidden;margin:18px 0 8px}
-  #progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--yellow));transition:width .35s ease}
-  .progress-text{font-size:14px;color:var(--gray);margin-bottom:22px;font-weight:600}
+  .progress-wrap{background:var(--line);border-radius:100px;height:22px;overflow:hidden;margin:24px 0 12px}
+  #progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--lime));transition:width .4s ease;border-radius:100px}
+  .progress-text{font-size:20px;color:var(--gray);margin-bottom:30px;font-weight:800}
   .checklist label{
-    display:flex;gap:14px;align-items:flex-start;padding:14px 18px;background:#fff;
-    border-radius:10px;margin-bottom:10px;cursor:pointer;border:1px solid var(--line);
-    transition:border-color .15s,background .15s;
+    display:flex;gap:20px;align-items:flex-start;padding:24px 28px;background:#fff;
+    border-radius:16px;margin-bottom:14px;cursor:pointer;border:2px solid var(--line);
+    transition:all .2s;font-size:20px;line-height:1.5; font-weight: 500;
   }
-  .checklist label:hover{border-color:#b8d8b8;background:#f7fcf7}
-  .checklist input{width:20px;height:20px;margin-top:2px;accent-color:var(--green);flex-shrink:0;cursor:pointer}
-  .checklist span{font-size:15px}
-  .checklist input:checked ~ span{text-decoration:line-through;color:#9aa3b2}
+  .checklist label:hover{border-color:var(--green);background:#fafff8; transform: translateX(5px);}
+  .checklist input{width:28px;height:28px;margin-top:2px;accent-color:var(--green);flex-shrink:0;cursor:pointer}
+  .checklist input:checked ~ span{text-decoration:line-through;color:#9aa3b2; opacity: 0.7;}
+
+  /* FLOATING WHATSAPP */
+  .whatsapp-float {
+    position: fixed; width: 70px; height: 70px; bottom: 40px; right: 40px;
+    background-color: #25d366; color: #FFF; border-radius: 50px;
+    text-align: center; font-size: 30px; box-shadow: 0 8px 30px rgba(37,211,102,.4);
+    z-index: 1000; display: flex; align-items: center; justify-content: center;
+    transition: transform .2s, box-shadow .2s; cursor: pointer; text-decoration: none;
+  }
+  .whatsapp-float:hover { transform: scale(1.1) translateY(-5px); box-shadow: 0 12px 40px rgba(37,211,102,.6); }
+  .whatsapp-float svg { width: 40px; height: 40px; fill: white; }
 
   /* FAQ */
-  details{background:#fff;border-radius:10px;border:1px solid var(--line);margin-bottom:10px;padding:0 20px;box-shadow:var(--shadow)}
-  summary{cursor:pointer;padding:16px 30px 16px 0;font-weight:700;list-style:none;position:relative;font-size:15px}
+  details{background:#fff;border-radius:16px;border:2px solid var(--line);margin-bottom:16px;padding:0 30px;transition:border-color .2s}
+  details[open]{border-color:var(--green); background:#fafcf9;}
+  summary{cursor:pointer;padding:26px 50px 26px 0;font-weight:800;list-style:none;position:relative;font-size:21px;line-height:1.4}
   summary::-webkit-details-marker{display:none}
-  summary::after{content:'+';position:absolute;right:0;top:12px;font-size:24px;color:var(--green);transition:transform .2s;line-height:1}
+  summary::after{content:'+';position:absolute;right:0;top:20px;font-size:36px;color:var(--green);transition:transform .2s;line-height:1;font-weight:400}
   details[open] summary::after{transform:rotate(45deg)}
-  details p{padding-bottom:18px;color:var(--gray);font-size:15px}
-
-  /* NOTICE */
-  .notice{
-    background:#e8f5e9;border-left:4px solid var(--green);padding:16px 20px;
-    border-radius:8px;font-size:15px;color:#1b5e20;margin:20px 0;
-  }
-  .notice b{color:#0d3d0d}
+  details p{padding-bottom:30px;color:var(--gray);font-size:20px;line-height:1.7}
 
   /* FOOTER */
-  footer{background:var(--green-dark);color:#c8e6c9;padding:44px 0;text-align:center;font-size:14px}
-  footer strong{color:#fff}
-  footer a{color:var(--yellow);text-decoration:none}
-  footer .small{margin-top:10px;font-size:12.5px;opacity:.75}
+  footer{background:var(--ink);color:#9db5a3;padding:60px 0;text-align:center;font-size:18px}
+  footer strong{color:#fff;font-size:24px;display:block;margin-bottom:16px}
+  footer a{color:var(--lime);text-decoration:none;font-weight:800}
+  footer a:hover{text-decoration:underline}
+  footer .small{margin-top:24px;font-size:16px;opacity:.7;line-height:1.6;max-width:900px;margin-left:auto;margin-right:auto}
 
-  @media(max-width:640px){
-    .hero{padding:60px 0 54px}
-    section{padding:48px 0}
-    .btn.ghost{margin-left:0;margin-top:10px}
-    .steps li{padding-left:58px}
+  @media(max-width:768px){
+    body{font-size:19px}
+    .hero{padding:60px 0 70px}
+    section{padding:60px 0}
+    .project-wrapper { padding: 30px 20px; }
+    .part-b-box { padding: 24px; font-size: 18px; }
+    .whatsapp-float { width: 60px; height: 60px; bottom: 20px; right: 20px; }
+    .whatsapp-float svg { width: 32px; height: 32px; }
+    .budget-table { display: block; overflow-x: auto; }
   }
 </style>
 </head>
 <body>
 
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/77777717707" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 2a13.9 13.9 0 0 0-11.9 21l-1.9 7 7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.9-1.6l-.4-.3-4.3 1.1 1.2-4.2-.3-.4A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.9-2.3-1s-.5-.2-.8.2-1 1.2-1.2 1.5-.4.3-.8.1a9.4 9.4 0 0 1-4.6-4c-.3-.5-.3-.9-.1-1.1s.3-.4.5-.6.3-.3.5-.6.2-.4.4-.7 0-.5 0-.7a6.6 6.6 0 0 0-1.1-2.6c-.3-.5-.6-.4-.8-.4h-.7c-.2 0-.6.1-.9.4a3.8 3.8 0 0 0-1.2 2.8 6.6 6.6 0 0 0 1.4 3.5 15 15 0 0 0 5.7 5 19 19 0 0 0 1.9.7 4.6 4.6 0 0 0 2.1.1 3.5 3.5 0 0 0 2.3-1.6c.3-.5.3-.9.2-1s-.2-.1-.5-.3z"/>
+  </svg>
+</a>
+
 <!-- HERO -->
 <header class="hero">
   <div class="container">
-    <div class="flag"><span></span><span></span><span></span><span></span><span></span></div>
-    <h1>Зеленые гранты ЕС из Казахстана</h1>
-    <p>Практическое руководство по экологичным и этичным возможностям Horizon Europe: климат, биоразнообразие, циркулярная экономика и обязательные этические стандарты для вашего проекта.</p>
-    <a href="#checklist" class="btn">Открыть чек-лист</a>
-    <a href="#eco-clusters" class="btn ghost">Эко-кластеры</a>
+    <div class="badge"><span class="dot"></span>Программа ЕС «Горизонт Европа» · 2026–2027</div>
+    <h1>🌿 Навигатор<br><span class="hl">зелёных грантов ЕС</span></h1>
+    <p class="lead">Интерактивная платформа для исследователей и инноваторов из Казахстана. Выберите направление, изучите бюджет и найдите свой путь к финансированию.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="#selector" class="btn">🎯 Выбрать грант</a>
+      <a href="#project" class="btn ghost">💡 Наш Проект (Подгузники)</a>
+    </div>
   </div>
 </header>
 
-<!-- NAV -->
-<nav>
+<!-- NAV (Яркие вкладки) -->
+<nav id="main-nav">
   <div class="container">
-    <a href="#intro">Обзор</a>
-    <a href="#eligibility">Право на участие</a>
-    <a href="#eco-clusters">Эко-кластеры (5 и 6)</a>
-    <a href="#ethics">Этика и DNSH</a>
-    <a href="#partners">Поиск партнеров</a>
-    <a href="#eval">Оценка</a>
-    <a href="#checklist">Чек-лист</a>
-    <a href="#faq">Вопросы</a>
+    <a href="#selector" class="active"><span class="ico">🎯</span>Выбрать грант</a>
+    <a href="#project"><span class="ico">👶</span>Проект (Подгузники)</a>
+    <a href="#iforia"><span class="ico">🏭</span>Технология i-Foria</a>
+    <a href="#budget"><span class="ico">💰</span>Бюджет</a>
+    <a href="#ethics"><span class="ico">🕊️</span>Этика и DNSH</a>
+    <a href="#partners"><span class="ico">🤝</span>Партнёры</a>
+    <a href="#checklist"><span class="ico">📋</span>Чек-лист</a>
   </div>
 </nav>
 
 <main>
 
-  <!-- 0. INTRO -->
-  <section id="intro">
+  <!-- SELECTOR (ГЛАВНАЯ ВКЛАДКА) -->
+  <section id="selector">
     <div class="container">
       <div class="sec-head">
-        <div class="sec-num">0</div>
-        <h2>Почему экология и этика — это не «бонус», а требование</h2>
-        <p>В Horizon Europe экологичность и этичность встроены в саму структуру конкурсов. Проекты, которые не соответствуют «зеленым» приоритетам и этическим нормам, не получают финансирования. Для заявителя из Казахстана это одновременно и вызов, и преимущество: ваша уникальная экспертиза в решении экологических проблем региона становится востребованным активом.</p>
+        <div class="kicker">🎯 Навигация</div>
+        <h2>Какой у вас проект?</h2>
+        <p>Выберите направление, чтобы узнать целевой кластер, бюджет и ближайшие дедлайны.</p>
       </div>
-      <div class="grid">
-        <div class="card">
-          <span class="tag">Факт</span>
-          <h3>Огромные бюджеты на «зелень»</h3>
-          <p>Только в Cluster 5 на 2026 год доступно <b>€466,7 млн</b> на климат, энергетику и мобильность[reference:7]. В Cluster 6 на 2026–2027 годы запланировано около <b>€677 млн</b> и <b>€632 млн</b> соответственно[reference:8].</p>
-        </div>
-        <div class="card yellow">
-          <span class="tag y">Тренд</span>
-          <h3>Казахстан в фокусе</h3>
-          <p>Казахстанские организации уже получают финансирование в эко-проектах: от устойчивых цепочек поставок титана до климатических решений. Ваш проект может стать следующим.</p>
-        </div>
-        <div class="card blue">
-          <span class="tag b">Обязательно</span>
-          <h3>Этика с первого слайда</h3>
-          <p>Все заявки проходят <b>этическую оценку (ethics appraisal)</b>. Принцип <b>«Не навреди» (DNSH)</b> и защита окружающей среды — сквозные требования, а не опция[reference:9][reference:10].</p>
-        </div>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+        <button class="card" style="cursor:pointer; text-align:left; border:2px solid var(--line); background:var(--white);" onclick="alert('Кластер 5 (Климат, энергия, мобильность): Бюджет €466,7 млн. Дедлайн: 31.03.2026 / 14.04.2026')">
+          <span class="ico">🌍</span>
+          <h3>Климат и энергия</h3>
+          <p>Адаптация, ВИЭ, батареи, CO₂</p>
+        </button>
+        <button class="card" style="cursor:pointer; text-align:left; border:2px solid var(--line); background:var(--white);" onclick="alert('Кластер 6 (Продовольствие, биоэкономика, окружающая среда): Бюджет €677 млн (2026) и €632 млн (2027). Дедлайн: 17.09.2026')">
+          <span class="ico">🦉</span>
+          <h3>Природа и вода</h3>
+          <p>Биоразнообразие, экосистемы</p>
+        </button>
+        <button class="card" style="cursor:pointer; text-align:left; border:2px solid var(--green); background:#f0fdf4;" onclick="alert('Ваш проект подходит сюда! Кластер 6, тема CIRCBIOT (Циркулярная экономика). Дедлайн: 22.09.2027. Бюджет до €7 млн.')">
+          <span class="ico">♻️</span>
+          <h3>Циркулярная экономика</h3>
+          <p>Отходы, переработка (наш проект!)</p>
+          <p style="font-size:14px;margin-top:10px;"><a href="https://www.ffg.at/" target="_blank" rel="noopener" style="color:var(--green);font-weight:700;">Бюджет Cluster 6: FFG →</a></p>
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- 1. ELIGIBILITY -->
-  <section id="eligibility" class="alt">
+  <!-- ВКЛАДКА: ПРОЕКТ ПОДГУЗНИКОВ -->
+  <section id="project" class="alt">
     <div class="container">
       <div class="sec-head">
-        <div class="sec-num">1</div>
-        <h2>Проверка права на участие: ваш «зеленый» маршрут</h2>
-        <p>Для заявителя из Казахстана правила те же, что и в общем случае, но с поправкой на эко-тематику.</p>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <span class="tag">Путь A</span>
-          <h3>Консорциум (основной путь)</h3>
-          <p>Минимум <b>3 независимые организации из 3 стран</b>, из них <b>≥1 из EU Member State</b>. Вы — полноценный <b>beneficiary</b> с собственным бюджетом. Ваша экспертиза в локальных экологических проблемах (Арал, Каспий, степи, горы) — сильный аргумент для партнеров.</p>
-        </div>
-        <div class="card yellow">
-          <span class="tag y">Путь B</span>
-          <h3>Ассоциированная страна</h3>
-          <p>Казахстан <b>пока не</b> ассоциирован, но соглашение готовится. Как только оно вступит в силу, вы будете приравнены к странам ЕС. Подавайтесь уже сейчас, чтобы иметь проекты «в портфеле» к моменту ассоциации.</p>
-        </div>
-        <div class="card blue">
-          <span class="tag b">Путь C</span>
-          <h3>MSCA и индивидуальные исследователи</h3>
-          <p>Для ученых-экологов и климатологов существуют схемы <b>MSCA</b>, где можно участвовать индивидуально или через университет. Это отдельная дорога для тех, кто хочет заниматься наукой, а не координацией консорциума.</p>
-        </div>
-      </div>
-      <div class="notice">
-        <b>Проверяйте Eligibility conditions!</b> В некоторых эко-конкурсах (например, связанных с восстановлением конкретных экосистем) могут быть ограничения по странам или типам организаций. Всегда читайте описание Topic.
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. ECO CLUSTERS -->
-  <section id="eco-clusters">
-    <div class="container">
-      <div class="sec-head">
-        <div class="sec-num">2</div>
-        <h2>Эко-кластеры: где искать «зеленые» деньги</h2>
-        <p>Два ключевых кластера Horizon Europe для экологических проектов. Ориентируйтесь на них при поиске конкурсов.</p>
+        <div class="kicker">💡 Флагманский проект</div>
+        <h2>Переработка подгузников: от отходов к гранулам SAP</h2>
+        <p>Инновационное решение для городов Казахстана и Центральной Азии: сбор, утилизация и производство двухфракционных суперабсорбирующих полимеров (SAP) с вовлечением семей и опекунов.</p>
       </div>
 
-      <div class="grid" style="margin-bottom:24px">
-        <div class="card">
-          <span class="tag">Cluster 5</span>
-          <h3>Климат, энергетика, мобильность</h3>
-          <p><b>Фокус:</b> климатические науки и адаптация, чистая энергетика, устойчивый транспорт, «умные» города. Бюджет на 2026 год — <b>€466,7 млн</b>[reference:11].</p>
-          <p><b>Примеры тем:</b> Климатические услуги и сценарии, улавливание CO2, интеграция возобновляемых источников, устойчивые батареи.</p>
-          <p><b>Платформа для поиска партнеров:</b> <b>GREENET Partner Search Tool</b> — международная сеть для Cluster 5, работает до конца 2027 года[reference:12].</p>
+      <div class="project-wrapper">
+        <!-- Масштаб проблемы -->
+        <div class="project-stats">
+          <div class="p-stat">
+            <div class="num">195 млн</div>
+            <div class="lbl">взрослых подгузников в год (2025)<br><a href="https://www.euromonitor.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--green);font-weight:700;">Источник: Euromonitor</a></div>
+          </div>
+          <div class="p-stat">
+            <div class="num">788 млн</div>
+            <div class="lbl">детских подгузников в год<br><a href="https://www.gepresearch.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--green);font-weight:700;">Источник: GEP Research</a></div>
+          </div>
+          <div class="p-stat">
+            <div class="num">3–4%</div>
+            <div class="lbl">от всех твёрдых бытовых отходов — это AHP (подгузники)<br><a href="https://cordis.europa.eu/article/id/444083-waste-conversion-technology-transforms-personal-care-industry-shifting-to-zero-waste-products" target="_blank" rel="noopener" style="font-size:14px;color:var(--green);font-weight:700;">Источник: CORDIS</a></div>
+          </div>
         </div>
-        <div class="card yellow">
-          <span class="tag y">Cluster 6</span>
-          <h3>Продовольствие, биоэкономика, окружающая среда</h3>
-          <p><b>Фокус:</b> биоразнообразие, циркулярная экономика, нулевое загрязнение, устойчивое сельское хозяйство, водные ресурсы. Бюджет на 2026–2027 — <b>€677 млн</b> и <b>€632 млн</b>[reference:13].</p>
-          <p><b>Примеры тем:</b> Восстановление экосистем, «живые лаборатории» (living labs) для природы, борьба с пластиком и химикатами, устойчивые цепочки поставок еды.</p>
-          <p><b>Платформа для поиска партнеров:</b> <b>CARE4BIO</b> — брокерские события и матчмейкинг для проектов по природе и биоразнообразию[reference:14].</p>
+
+        <h3 style="color:var(--green-deep); margin-bottom:20px;">Три компонента нашего решения</h3>
+        <div class="grid">
+          <div class="card" style="padding:24px; border-radius:16px;">
+            <span class="ico">🧪</span>
+            <h3 style="font-size:20px;">1. Гранулы SAP</h3>
+            <p style="font-size:17px;">Производство гранул двух фракций (суперабсорбирующий полимер) для впитывания и удержания биологических жидкостей. Опирается на успешные кейсы проектов i-Foria и EMBRACED.</p>
+          </div>
+          <div class="card" style="padding:24px; border-radius:16px;">
+            <span class="ico">🔄</span>
+            <h3 style="font-size:20px;">2. Сбор и утилизация</h3>
+            <p style="font-size:17px;">Организация сбора через сеть контейнеров. Вовлечение опекунов, мам и пап через понятную коммуникацию и удобство.</p>
+          </div>
+          <div class="card" style="padding:24px; border-radius:16px;">
+            <span class="ico">📦</span>
+            <h3 style="font-size:20px;">3. Спец. контейнеры</h3>
+            <p style="font-size:17px;">Контейнеры многоразового использования для дома и пунктов продаж. Инструмент изменения привычек (вовлечение граждан).</p>
+          </div>
         </div>
-      </div>
 
-      <h3 style="margin-bottom:16px">Актуальные дедлайны (ориентировочно)</h3>
-      <ol class="steps">
-        <li>
-          <strong>Cluster 5: климат и энергетика</strong>
-          <span>Ключевые конкурсы закрываются <b>31 марта 2026</b> (энергетика) и <b>14 апреля 2026</b> (транспорт). Следите за обновлениями на портале[reference:15].</span>
-        </li>
-        <li>
-          <strong>Cluster 6: биоразнообразие и нулевое загрязнение</strong>
-          <span>Основной дедлайн для многих тем — <b>17 сентября 2026</b>. Открытие — 17 апреля 2026[reference:16].</span>
-        </li>
-        <li>
-          <strong>Двухэтапные конкурсы (Two-Stage)</strong>
-          <span>Первый этап может закрываться в апреле 2026, второй — в сентябре 2026. Внимательно читайте условия конкретного Topic[reference:17].</span>
-        </li>
-      </ol>
-      <div class="notice">
-        <b>Совет:</b> Не ограничивайтесь одним кластером. Экологический проект может подходить под темы из разных кластеров, если он затрагивает, например, и климат, и устойчивое сельское хозяйство.
-      </div>
-    </div>
-  </section>
+        <!-- Культурный код (ОБНОВЛЕНО) -->
+        <div class="highlight-box">
+          <strong>💰 Почему это сработает: Прямая экономическая выгода и бонусная программа</strong><br><br>
+          Вместо того чтобы просто сдавать отходы «за идею», потребители получают реальную выгоду. При возврате использованных подгузников (в герметичном контейнере) опекуны получают <b>скидку на следующую покупку</b> или <b>баллы в бонусной программе</b> ритейлеров. Поскольку подгузники — это товар постоянного спроса, такая скидка напрямую снижает расходы семьи. Это мощный триггер для формирования привычки и стимул для участия.
+        </div>
 
-  <!-- 3. ETHICS -->
-  <section id="ethics" class="alt">
-    <div class="container">
-      <div class="sec-head">
-        <div class="sec-num">3</div>
-        <h2>Этика и принцип «Не навреди» (DNSH)</h2>
-        <p>В Horizon Europe этика — это не формальность, а критерий качества. Для экологических проектов ключевое значение имеют два инструмента: <b>Ethics Self-Assessment</b> и <b>DNSH</b>.</p>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <span class="tag">Шаг 1</span>
-          <h3>Этическая самопроверка (Ethics Self-Assessment)</h3>
-          <p>Все заявители обязаны заполнить <b>Ethics Issues Table</b> (Раздел 12 Horizon Europe Programme Guide)[reference:18]. Для эко-проектов особое внимание уделите:</p>
+        <!-- ТЕКСТ ДЛЯ PART B (ОБНОВЛЕНО) -->
+        <div class="part-b-box">
+          <h4>Черновик для заявки: Часть B (Part B), Раздел 1.2 «Концепция и методология»</h4>
+          <p><strong>1.2. Концепция и методология</strong></p>
+          <p>Проект предлагает системное решение проблемы отходов абсорбирующих гигиенических продуктов (AHP) в Республике Казахстан и Центральной Азии, интегрируя технологические инновации с социальными механизмами изменения поведения. Концепция основана на принципах циркулярной экономики и направлена на замыкание жизненного цикла подгузников.</p>
+          <p><strong>Концепция (Concept):</strong> В отличие от существующих технологических проектов-аналогов (i-Foria, EMBRACED), которые фокусируются исключительно на промышленной переработке, наш проект решает проблему «последней мили» — массового сбора отходов на уровне домохозяйств. Мы внедряем <b>модель возврата на основе стимулирования (incentive-based return model)</b> для герметичных контейнеров. Вместо простого депозита мы используем механизм скидок или бонусных баллов от ритейлеров, что создает прямую экономическую мотивацию для домохозяйств и обеспечивает высокий коэффициент возврата (return rate).</p>
+          <p><strong>Методология (Methodology):</strong> Проект реализуется через три взаимосвязанных рабочих пакета (Work Packages, WP).</p>
           <ul>
-            <li><b>Защита окружающей среды:</b> как ваш проект повлияет на экосистемы?</li>
-            <li><b>Здоровье человека:</b> нет ли риска от химикатов или загрязнения?</li>
-            <li><b>Благополучие животных:</b> если используются животные, соблюдены ли принципы 3R?</li>
-            <li><b>Справедливое распределение выгод:</b> получат ли местные сообщества пользу от проекта?</li>
+            <li><strong>Рабочий пакет 1 (WP1): Социальная инженерия и программа лояльности.</strong> Разработка и пилотирование системы скидок/бонусов. Мы создаем специальные герметичные контейнеры многоразового использования (с гигиенической обработкой на заводе) и размещаем пункты приема в существующей сети продаж. Целевой ключевой показатель эффективности (KPI) возврата контейнеров составляет 55–75% благодаря экономическому стимулированию.</li>
+            <li><strong>Рабочий пакет 2 (WP2): Логистика сбора и IT-интеграция.</strong> Оптимизация цепочек поставок от пунктов приема до перерабатывающего завода с соблюдением строгих санитарных норм и принципов «Не навреди» (DNSH). Разработка IT-решения для начисления скидок покупателям.</li>
+            <li><strong>Рабочий пакет 3 (WP3): Производство двухфракционных гранул SAP.</strong> Извлечение суперабсорбирующего полимера и создание гранул с заданными свойствами для вторичного использования в промышленности.</li>
+          </ul>
+          <p>Особое внимание в методологии уделяется <strong>этическим аспектам (Ethics Self-Assessment — Самооценка этики)</strong>: обеспечению безопасности сборщиков, информированному согласию семей и защите персональных данных. Проект соответствует целям Европейского зеленого курса (EU Green Deal) и демонстрирует жизнеспособную бизнес-модель для масштабирования в регионах с формирующейся экономикой.</p>
+        </div>
+
+        <!-- Доказательная база -->
+        <h3 style="margin-top:40px; margin-bottom:20px;">Доказательная база (Почему это не дублирование)</h3>
+        <div class="grid">
+          <div class="card" style="border-top:6px solid var(--green);">
+            <h3>EMBRACED (H2020)</h3>
+            <p style="font-size:17px;">Доказали потенциал переработки AHP-отходов. Бюджет €15,8 млн. Наш проект берет их технологические наработки, но решает нерешенную проблему массового сбора.</p>
+            <p style="font-size:15px;margin-top:12px;"><a href="https://cordis.europa.eu/article/id/444083-waste-conversion-technology-transforms-personal-care-industry-shifting-to-zero-waste-products" target="_blank" rel="noopener" style="color:var(--green);font-weight:700;">Читать отчёт CORDIS (Results in Brief) →</a></p>
+          </div>
+          <div class="card" style="border-top:6px solid var(--green);">
+            <h3>i-Foria (Горизонт Европа)</h3>
+            <p style="font-size:17px;">Запатентовали разделение подгузников на фракции. Мы идем дальше: производим специализированные гранулы SAP и создаем потребительскую инфраструктуру.</p>
+            <p style="font-size:15px;margin-top:12px;"><a href="https://circulareconomy.europa.eu/platform/en/good-practices/i-foria-italia-recycling-absorbent-hygiene-products" target="_blank" rel="noopener" style="color:var(--green);font-weight:700;">Страница на European Circular Economy Platform →</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ВКЛАДКА: ТЕХНОЛОГИЯ I-FORIA -->
+  <section id="iforia">
+    <div class="container">
+      <div class="sec-head">
+        <div class="kicker">🏭 Инвестиционно-техническое досье</div>
+        <h2>Как устроен завод i-Foria Italia</h2>
+        <p>Анализ итальянского проекта-аналога: реальная технология, состав оборудования, стоимость строительства заводов и вопросы, которые нужно задать разработчику для адаптации в Казахстане.</p>
+      </div>
+
+      <div class="grid">
+        <!-- 5 этапов -->
+        <div class="card" style="grid-column: 1 / -1;">
+          <h3>Технологическая цепочка (5 этапов)</h3>
+          <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:20px;">
+            <div style="background:#f0fdf4; padding:16px; border-radius:12px;">
+              <span class="ico" style="font-size:24px; margin-bottom:8px;">📥</span>
+              <h4 style="font-size:18px;">1. Приёмка</h4>
+              <p style="font-size:15px;">Весы, закрытые площадки, транспортёры.</p>
+            </div>
+            <div style="background:#f0fdf4; padding:16px; border-radius:12px;">
+              <span class="ico" style="font-size:24px; margin-bottom:8px;">♨️</span>
+              <h4 style="font-size:18px;">2. Стерилизация</h4>
+              <p style="font-size:15px;">Промышленный паровой автоклав.</p>
+            </div>
+            <div style="background:#f0fdf4; padding:16px; border-radius:12px;">
+              <span class="ico" style="font-size:24px; margin-bottom:8px;">💨</span>
+              <h4 style="font-size:18px;">3. Сушка</h4>
+              <p style="font-size:15px;">Снижение остаточной влажности.</p>
+            </div>
+            <div style="background:#f0fdf4; padding:16px; border-radius:12px;">
+              <span class="ico" style="font-size:24px; margin-bottom:8px;">⚙️</span>
+              <h4 style="font-size:18px;">4. Сепарация</h4>
+              <p style="font-size:15px;">Разделение целлюлозы, SAP и пластика.</p>
+            </div>
+            <div style="background:#f0fdf4; padding:16px; border-radius:12px;">
+              <span class="ico" style="font-size:24px; margin-bottom:8px;">📦</span>
+              <h4 style="font-size:18px;">5. Упаковка</h4>
+              <p style="font-size:15px;">Бункеры, дозаторы, фасовка.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Таблица мощностей и инвестиций -->
+      <h3 style="margin-top:40px; margin-bottom:20px;">Мощности и реальные инвестиции</h3>
+      <table class="budget-table">
+        <thead>
+          <tr>
+            <th>Объект / Модель</th>
+            <th>Мощность</th>
+            <th>Стоимость проекта</th>
+            <th>Источник</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Capannori (Италия)</b></td>
+            <td>10 000 т/год</td>
+            <td><b>€10 млн</b></td>
+            <td><a href="https://www.comune.capannori.lu.it/notizia/prosegue-liter-per-la-realizzazione-della-piattaforma-per-il-riciclo-dei-prodotti-assorbenti-si-tratta-di-una-grande-lavatrice-quindi-non-brucia-nulla-non-produce-emissioni-ne-odori/" target="_blank" rel="noopener" style="color:var(--green);">Коммуна Капаннори</a></td>
+          </tr>
+          <tr>
+            <td><b>Messina (Италия)</b></td>
+            <td>5 000 т/год</td>
+            <td><b>€9,69 млн</b> (+€2,1 млн регион)</td>
+            <td><a href="https://www.srrmessinaareametropolitana.it/it/news/comunicato-impianto-per-il-recupero-dei-prodotti-assorbenti-per-la-persona-aggiudicata-la-gara-per-la-realizzazione-dellopera-promossa-dalla-srr-e-finanziata-dal-pnrr" target="_blank" rel="noopener" style="color:var(--green);">SRR Messina</a></td>
+          </tr>
+          <tr>
+            <td><b>Демо-установка (Spresiano)</b></td>
+            <td>100 кг / партия</td>
+            <td>Seed-инвестиции <b>€1,7 млн</b></td>
+            <td><a href="https://www.i-foria.eu/en/press-release/inauguration-of-the-first-i-foria-italias-absorbent-hygiene-products-ahp-recycling-demonstration-plant/" target="_blank" rel="noopener" style="color:var(--green);">i-Foria</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:16px; color:var(--gray); margin-bottom:30px;"><i>* Примечание: €10 млн и €9,69 млн — это бюджеты проектов (включая стройку, инжиниринг и разрешения), а не цена оборудования.</i></p>
+
+      <!-- CAPEX / OPEX -->
+      <div class="grid">
+        <div class="card">
+          <span class="ico">🏗️</span>
+          <h3>Структура CAPEX (что строить)</h3>
+          <ul style="font-size:17px;">
+            <li>Технологическое оборудование (автоклав, сушилка)</li>
+            <li>Приёмка сырья (весы, контейнеры)</li>
+            <li>Инженерные системы (пар, вода, энергия)</li>
+            <li>Очистка воздуха и утилизация стоков</li>
+            <li>Лаборатория контроля качества SAP</li>
+            <li>Строительство корпусов и складов</li>
           </ul>
         </div>
-        <div class="card yellow">
-          <span class="tag y">Шаг 2</span>
-          <h3>Принцип DNSH (Do No Significant Harm)</h3>
-          <p>Ваш проект не должен наносить значительного ущерба <b>шести экологическим целям</b> ЕС[reference:19]:</p>
-          <ul>
-            <li>Смягчение изменения климата</li>
-            <li>Адаптация к изменению климата</li>
-            <li>Устойчивое использование водных и морских ресурсов</li>
-            <li>Циркулярная экономика (отходы и переработка)</li>
-            <li>Предотвращение загрязнения воздуха, воды и почвы</li>
-            <li>Защита и восстановление биоразнообразия</li>
+        <div class="card">
+          <span class="ico">⚡</span>
+          <h3>Структура OPEX (на что тратить)</h3>
+          <ul style="font-size:17px;">
+            <li>Закупка и логистика сырья</li>
+            <li>Электроэнергия и пар</li>
+            <li>Вода и очистка стоков</li>
+            <li>Персонал и обслуживание</li>
+            <li>Лабораторный контроль</li>
+            <li>Утилизация остаточных фракций</li>
           </ul>
-          <p style="margin-top:10px;">Заполните таблицу DNSH в Part B. Если ваш проект использует, например, химикаты, обоснуйте, почему это безопасно.</p>
+          <p style="font-size:15px; margin-top:10px; color:#b45309;"><b>Важно:</b> i-Foria не публикует точную себестоимость тонны или EBITDA. Эти данные нужно запрашивать напрямую.</p>
         </div>
       </div>
-      <div class="notice">
-        <b>Практический вывод:</b> Начните готовить этическую часть <b>до</b> написания основного текста. Если выявится серьезная этическая проблема (например, проект может навредить редкому виду), лучше скорректировать идею на раннем этапе.
+
+      <!-- План переговоров -->
+      <div class="highlight-box" style="margin-top:40px;">
+        <strong>📋 10 вопросов для переговоров с i-Foria</strong>
+        <ol style="margin-left:20px; margin-top:15px; font-size:18px;">
+          <li>Возможность приобретения лицензии на технологию?</li>
+          <li>Технические характеристики автоклава?</li>
+          <li>Производительность каждой стадии?</li>
+          <li>Реальный выход SAP и целлюлозы из 1 тонны отходов?</li>
+          <li>Остаточная влажность и чистота SAP?</li>
+          <li>Энергопотребление на 1 тонну?</li>
+          <li>Стоимость технологической линии (отдельно от стройки)?</li>
+          <li>Возможность строительства завода в Казахстане?</li>
+          <li>Передача технологии и обучение персонала?</li>
+          <li>Проведение совместного пилотного проекта?</li>
+        </ol>
+      </div>
+
+      <!-- Следующий этап -->
+      <h3 style="margin-top:40px; margin-bottom:20px;">Следующий этап для EcoSAP Central Asia</h3>
+      <div class="grid">
+        <div class="card">
+          <h3 style="font-size:20px;">Вариант А: Пилот (1 000 т/год)</h3>
+          <p style="font-size:16px;">Проверка технологии, логистики сбора и качества SAP. Начало диалога с i-Foria.</p>
+        </div>
+        <div class="card">
+          <h3 style="font-size:20px;">Вариант B: Средний (5 000 т/год)</h3>
+          <p style="font-size:16px;">Сопоставим с проектом Messina. Позволяет выйти на самоокупаемость и покрыть крупный город.</p>
+        </div>
+        <div class="card">
+          <h3 style="font-size:20px;">Вариант C: Крупный (10 000 т/год)</h3>
+          <p style="font-size:16px;">Сопоставим с Capannori. Требует больших инвестиций, но дает максимальный эффект масштаба.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. PARTNERS -->
-  <section id="partners">
+  <!-- БЮДЖЕТ -->
+  <section id="budget" class="alt">
     <div class="container">
       <div class="sec-head">
-        <div class="sec-num">4</div>
-        <h2>Поиск партнеров: специализированные «зеленые» платформы</h2>
-        <p>Общие инструменты (Partner Search на портале, CORDIS, NCP) работают, но для эко-тематики есть более точные каналы.</p>
+        <div class="kicker">💰 Финансы</div>
+        <h2>Бюджетная таблица: как это работает</h2>
+        <p>Для Innovation Action (IA) ставка со-финансирования зависит от вашего статуса. Коммерческие организации получают 70%, некоммерческие — 100%.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <span class="ico">📊</span>
+          <h3>Структура затрат</h3>
+          <ul>
+            <li><b>Прямые затраты:</b> Персонал (60-80% бюджета), Субподряд, Оборудование, Прочие.</li>
+            <li><b>Косвенные затраты:</b> Фиксированные <b>25%</b> от суммы прямых затрат (кроме субподряда).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="ico">💡</span>
+          <h3>Важный нюанс: Lump Sum</h3>
+          <p>Около 50% конкурсов 2026-2027 используют паушальные суммы (Lump Sum). Вы получаете фиксированную сумму за выполнение рабочего пакета, но смета должна быть рассчитана идеально.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:40px; margin-bottom:20px;">Пример расчета (коммерческая организация)</h3>
+      <p>Предположим, ваши общие затраты составляют <b>€1,000,000</b>.</p>
+      
+      <table class="budget-table">
+        <thead>
+          <tr>
+            <th>Категория затрат</th>
+            <th>Сумма (€)</th>
+            <th>Комментарий</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Прямые затраты</b></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>A. Персонал</td>
+            <td>600,000</td>
+            <td>Зарплаты и налоги команды</td>
+          </tr>
+          <tr>
+            <td>B. Субподряд</td>
+            <td>150,000</td>
+            <td>Производство контейнеров (не входит в базу для косвенных)</td>
+          </tr>
+          <tr>
+            <td>C. Оборудование</td>
+            <td>100,000</td>
+            <td>Амортизация пилотной линии</td>
+          </tr>
+          <tr>
+            <td>D. Прочие прямые</td>
+            <td>50,000</td>
+            <td>Поездки, материалы</td>
+          </tr>
+          <tr>
+            <td><b>Итого прямые</b></td>
+            <td><b>900,000</b></td>
+            <td>(A + B + C + D)</td>
+          </tr>
+          <tr>
+            <td><b>Косвенные затраты (25%)</b></td>
+            <td><b>187,500</b></td>
+            <td>25% от (A+C+D) = 25% от €750,000</td>
+          </tr>
+          <tr class="total-row">
+            <td>ИТОГО ПОДТВЕРЖДЕННЫЕ ЗАТРАТЫ</td>
+            <td>1,087,500</td>
+            <td>Прямые + Косвенные</td>
+          </tr>
+          <tr>
+            <td>Грант ЕС (70%)</td>
+            <td>761,250</td>
+            <td>70% от €1,087,500</td>
+          </tr>
+          <tr>
+            <td>Ваше со-финансирование (30%)</td>
+            <td>326,250</td>
+            <td>Оставшаяся сумма</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ETHICS -->
+  <section id="ethics">
+    <div class="container">
+      <div class="sec-head">
+        <div class="kicker">🕊️ Этика и DNSH</div>
+        <h2>Экология без этики не финансируется</h2>
+        <p>Для проекта с подгузниками этическая часть критична. Вам нужно заполнить Таблицу этических вопросов (Ethics Issues Table) и обосновать безопасность.</p>
       </div>
       <div class="grid">
         <div class="card">
-          <span class="tag">Cluster 5</span>
-          <h3>GREENET Partner Search Tool</h3>
-          <p>Международная платформа, объединяющая координаторов и партнеров по темам климата, энергетики и мобильности. Уже более <b>1100 участников</b> со всего мира. Работает до декабря 2027 года[reference:20].</p>
-          <p><b>Ссылка:</b> <a href="https://www.greenet-partnersearch.eu/" target="_blank" rel="noopener" style="color:var(--green);font-weight:600;">greenet-partnersearch.eu</a> (примерный адрес, уточняйте на портале NCP).</p>
+          <span class="ico">📝</span>
+          <h3>Самооценка этики (Ethics Self-Assessment)</h3>
+          <ul>
+            <li>Безопасность сборщиков (контакт с биологическими жидкостями)</li>
+            <li>Информированное согласие опекунов и семей</li>
+            <li>Гигиеническая безопасность контейнеров</li>
+            <li>Защита персональных данных (если ведется учет домохозяйств)</li>
+          </ul>
         </div>
-        <div class="card yellow">
-          <span class="tag y">Cluster 6 / Природа</span>
-          <h3>CARE4BIO Brokerage Events</h3>
-          <p>Онлайн-мероприятия для поиска партнеров под конкурсы по биоразнообразию и природным решениям (например, NATURE Call). Регистрация через платформу <b>B2Match</b>. Позволяют проводить двусторонние встречи один-на-один[reference:21].</p>
-          <p><b>Как найти:</b> Следите за анонсами на портале NCP Казахстана и на сайте CARE4BIO.</p>
+        <div class="card">
+          <span class="ico">🚫</span>
+          <h3>Принцип «Не навреди» (DNSH)</h3>
+          <p>Проект не должен наносить ущерб 6 целям ЕС. Для вас критичны:</p>
+          <ul>
+            <li><b>Циркулярная экономика:</b> возврат SAP в производство.</li>
+            <li><b>Нулевое загрязнение:</b> предотвращение попадания AHP на свалки.</li>
+          </ul>
+          <p style="font-size:15px;margin-top:12px;"><a href="https://ncpflanders.be/index.php/infosheets/dnsh-principle-in-horizon-europe" target="_blank" rel="noopener" style="color:var(--green);font-weight:700;">Полный список 6 целей DNSH (NCP Flanders) →</a></p>
         </div>
-        <div class="card blue">
-          <span class="tag b">Общий инструмент</span>
-          <h3>Partner Search на EU Portal</h3>
-          <p>Не забывайте про официальный раздел <b>Partner Search</b> на портале Funding & Tenders. Фильтруйте по кластеру и типу организации. Публикуйте собственный профиль (Expression of Interest) с акцентом на вашу эко-экспертизу.</p>
-        </div>
-      </div>
-      <div class="notice">
-        <b>Совет по питчу:</b> В первом письме координатору не пишите «мы хотим участвовать». Напишите: «Наша организация обладает данными/экспертизой по [конкретная экосистема/проблема] в Казахстане, что может усилить Work Package по [задача]. Наш PIC — [номер]».
       </div>
     </div>
   </section>
 
-  <!-- 5. EVAL -->
-  <section id="eval" class="alt">
+  <!-- PARTNERS -->
+  <section id="partners" class="alt">
     <div class="container">
       <div class="sec-head">
-        <div class="sec-num">5</div>
-        <h2>Оценка: как «зеленость» и этика влияют на баллы</h2>
-        <p>Экология и этика пронизывают все три критерия оценки. Игнорировать их — значит потерять баллы.</p>
+        <div class="kicker">🤝 Партнёры</div>
+        <h2>Где искать консорциум</h2>
+        <p>Вам нужны партнеры из ЕС. Используйте эти каналы для поиска.</p>
       </div>
       <div class="grid">
         <div class="card">
-          <span class="tag">Excellence</span>
-          <h3>Превосходство</h3>
-          <p>Насколько ваша эко-идея выходит за рамки <b>state-of-the-art</b>? Четко ли обоснована методология? Для этики: соответствует ли дизайн исследования этическим принципам (например, информированное согласие, если затрагиваются сообщества).</p>
+          <span class="ico">🌱</span>
+          <h3>Платформа CARE4BIO</h3>
+          <p>Специализированная платформа для Кластера 6. Брокерские сессии (B2B встречи) по темам биоэкономики и циркулярности.</p>
         </div>
-        <div class="card yellow">
-          <span class="tag y">Impact</span>
-          <h3>Воздействие</h3>
-          <p>Как проект поможет достичь <b>EU Green Deal</b>, стратегии по биоразнообразию или циркулярной экономике? Опишите <b>pathways towards impact</b> с измеримыми KPI. Экологический эффект должен быть конкретным и проверяемым.</p>
+        <div class="card">
+          <span class="ico">🔎</span>
+          <h3>База данных CORDIS</h3>
+          <p>Найдите i-Foria и EMBRACED, свяжитесь с их координаторами. Возможно, они ищут партнера для масштабирования в Азии.</p>
         </div>
-        <div class="card blue">
-          <span class="tag b">Implementation</span>
-          <h3>Реализация</h3>
-          <p>Реалистичен ли план? Учтены ли этические риски и меры по их снижению? Есть ли в команде этический советник или ответственный за DNSH? Это показывает зрелость консорциума.</p>
+        <div class="card">
+          <span class="ico">📨</span>
+          <h3>Национальный контактный центр (NCP)</h3>
+          <p>Напишите на <b>Horizon.Europe@science-fund.kz</b>. Национальные координаторы помогут оформить идею и найти партнеров.</p>
         </div>
-      </div>
-      <div class="notice">
-        <b>Порог:</b> Для RIA/IA — не менее <b>10 из 15</b> баллов. Этическая часть не дает прямых баллов, но ее отсутствие или слабость могут привести к снижению оценки или отзыву заявки на этапе этической проверки.
       </div>
     </div>
   </section>
 
-  <!-- 6. CHECKLIST -->
+  <!-- CHECKLIST -->
   <section id="checklist">
     <div class="container">
       <div class="sec-head">
-        <div class="sec-num">6</div>
-        <h2>Чек-лист «зеленого» заявителя</h2>
-        <p>Отмечайте шаги — прогресс сохраняется в браузере.</p>
+        <div class="kicker">📋 Чек-лист</div>
+        <h2>12 шагов к гранту</h2>
+        <p>Отмечайте выполненные пункты. Прогресс сохраняется.</p>
       </div>
-
       <div class="progress-wrap"><div id="progress-bar"></div></div>
       <div class="progress-text" id="progress-text">0 из 12 (0%)</div>
-
       <div class="checklist">
-        <label><input type="checkbox" id="g1"><span>Создан EU Login и подтверждена почта</span></label>
-        <label><input type="checkbox" id="g2"><span>Организация зарегистрирована в Participant Register, получен PIC</span></label>
-        <label><input type="checkbox" id="g3"><span>Назначен LEAR</span></label>
-        <label><input type="checkbox" id="g4"><span>Изучены Work Programme 2026–2027 для Cluster 5 и/или Cluster 6</span></label>
-        <label><input type="checkbox" id="g5"><span>Найдены 2–3 подходящих эко-Topic, проверены Eligibility conditions</span></label>
-        <label><input type="checkbox" id="g6"><span>Определен Type of Action (RIA / IA / CSA) и бюджет</span></label>
-        <label><input type="checkbox" id="g7"><span>Начата <b>Ethics Self-Assessment</b> (Ethics Issues Table)</span></label>
-        <label><input type="checkbox" id="g8"><span>Проанализирован проект на соответствие <b>DNSH</b> (6 целей)</span></label>
-        <label><input type="checkbox" id="g9"><span>Начаты переговоры с партнерами (GREENET / CARE4BIO / Partner Search)</span></label>
-        <label><input type="checkbox" id="g10"><span>Определена роль в консорциуме и ваш вклад в эко-результаты</span></label>
-        <label><input type="checkbox" id="g11"><span>Подготовлен черновик раздела Impact с экологическими KPI</span></label>
-        <label><input type="checkbox" id="g12"><span>Проверены формальные требования Part B (шрифт, поля, лимит страниц)</span></label>
+        <label><input type="checkbox" id="g1"><span>Создан аккаунт (EU Login) и подтверждена почта</span></label>
+        <label><input type="checkbox" id="g2"><span>Организация внесена в Реестр участников (Participant Register), получен Код участника (PIC)</span></label>
+        <label><input type="checkbox" id="g3"><span>Назначен официальный представитель (LEAR)</span></label>
+        <label><input type="checkbox" id="g4"><span>Изучена Рабочая программа (Work Programme) 2026–2027 (Кластер 6)</span></label>
+        <label><input type="checkbox" id="g5"><span>Найдены 2–3 подходящие темы (Topics), проверены Условия участия (Eligibility conditions)</span></label>
+        <label><input type="checkbox" id="g6"><span>Определён Тип действия (Инновационное - IA / Исследовательское - RIA) и бюджет</span></label>
+        <label><input type="checkbox" id="g7"><span>Начата Самооценка этики (Ethics Self-Assessment / Ethics Issues Table)</span></label>
+        <label><input type="checkbox" id="g8"><span>Заполнена таблица «Не навреди» (DNSH) по 6 целям</span></label>
+        <label><input type="checkbox" id="g9"><span>Начаты переговоры с партнёрами (CARE4BIO / Поиск партнеров - Partner Search)</span></label>
+        <label><input type="checkbox" id="g10"><span>Определена ваша роль в консорциуме и вклад в эко-результаты</span></label>
+        <label><input type="checkbox" id="g11"><span>Подготовлен черновик раздела «Воздействие» (Impact) с экологическими KPI</span></label>
+        <label><input type="checkbox" id="g12"><span>Проверены формальные требования к Части B (Part B): шрифт, поля, лимит страниц</span></label>
       </div>
-    </div>
-  </section>
-
-  <!-- 7. FAQ -->
-  <section id="faq" class="alt">
-    <div class="container">
-      <div class="sec-head">
-        <div class="sec-num">7</div>
-        <h2>Частые вопросы об эко- и этичных грантах</h2>
-      </div>
-
-      <details>
-        <summary>Мой проект не про климат, а про, например, устойчивое сельское хозяйство. Мне подходит Cluster 5?</summary>
-        <p>Скорее всего, вам в <b>Cluster 6</b> («Продовольствие, биоэкономика, природные ресурсы, сельское хозяйство и окружающая среда»). Cluster 5 больше про климатические науки, энергетику и транспорт. Но если ваш проект на стыке (например, климатически устойчивое земледелие), проверьте оба кластера.</p>
-      </details>
-
-      <details>
-        <summary>Что такое DNSH и обязательно ли это?</summary>
-        <p><b>DNSH (Do No Significant Harm)</b> — принцип «Не навреди». Да, это обязательное требование для проектов, связанных с экологией и климатом. Вам нужно будет заполнить таблицу, показывающую, что ваш проект не наносит значительного ущерба шести экологическим целям ЕС. Это часть этической и технической оценки[reference:22].</p>
-      </details>
-
-      <details>
-        <summary>Где найти этические требования для моего проекта?</summary>
-        <p>Основной документ — <b>Horizon Europe Programme Guide (Раздел 12)</b> и руководство <b>«How to complete your ethics self-assessment»</b>. Также полезен <b>Guide on Ethics Appraisal Procedure in Horizon Europe</b>. Ссылки на них обычно дает NCP Казахстана при консультации.</p>
-      </details>
-
-      <details>
-        <summary>Обязательно ли иметь партнера из ЕС для эко-проекта?</summary>
-        <p>Да, для большинства конкурсов RIA/IA в консорциуме должна быть <b>как минимум одна организация из EU Member State</b> (или Associated Country). Ваша казахстанская организация может быть beneficiary, но «европейское плечо» необходимо по формальным правилам.</p>
-      </details>
-
-      <details>
-        <summary>Может ли индивидуальный исследователь-эколог получить грант?</summary>
-        <p>В «классических» конкурсах RIA/IA — нет, нужен консорциум. Но для индивидуальных исследователей есть схема <b>MSCA (Marie Skłodowska-Curie Actions)</b>, в рамках которой можно подаваться через университет или исследовательский институт. Это отдельная возможность.</p>
-      </details>
     </div>
   </section>
 
@@ -475,12 +683,16 @@
 
 <footer>
   <div class="container">
-    <strong>Зеленые гранты ЕС из Казахстана</strong> — экология и этика в Horizon Europe
-    <div class="small">Неофициальный информационный ресурс. Не является сайтом Европейской комиссии. Актуальные правила, дедлайны и требования всегда проверяйте на <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home" target="_blank" rel="noopener">EU Funding &amp; Tenders Portal</a> и у National Contact Point Казахстана.</div>
+    <strong>🌿 Зелёные гранты ЕС из Казахстана</strong>
+    <p>Интерактивный навигатор по программе «Горизонт Европа» · экология и этика</p>
+    <div class="small">
+      Неофициальный ресурс. Актуальные правила и дедлайны проверяйте на <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home" target="_blank" rel="noopener">Портале финансирования и тендеров ЕС (EU Funding & Tenders Portal)</a> и у Национального контактного центра (NCP) Казахстана.
+    </div>
   </div>
 </footer>
 
 <script>
+  // 1. Логика чек-листа
   (function () {
     var boxes = document.querySelectorAll('#checklist input[type="checkbox"]');
     var bar = document.getElementById('progress-bar');
@@ -505,6 +717,29 @@
     });
 
     update();
+  })();
+
+  // 2. Подсветка активной вкладки в меню при скролле
+  (function() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= (sectionTop - 150)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
   })();
 </script>
 </body>
