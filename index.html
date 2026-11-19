@@ -11,8 +11,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌿 Зелёные гранты ЕС — Навигатор по программе «Горизонт Европа»</title>
-<meta name="description" content="Интерактивный навигатор по экологичным грантам ЕС. Бюджет, этика, проект переработки подгузников, технология i-Foria и поиск партнеров.">
+<title>🌿 Зелёные гранты ЕС — Все конкурсы для замкнутого цикла</title>
+<meta name="description" content="Полный реестр конкурсов Horizon Europe для проекта переработки подгузников: CIRCBIO 2026/2027, CBE JU, каскадное финансирование.">
 <style>
   :root{
     --green:#0a7d38;
@@ -77,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .btn.ghost{background:transparent;color:#fff;border:2.5px solid rgba(255,255,255,.3);box-shadow:none}
   .btn.ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
 
-  /* NAV - ЯРКИЕ ВКЛАДКИ */
+  /* NAV */
   nav{
     position:sticky;top:0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);
     border-bottom:2px solid var(--line);z-index:100;padding:16px 0;
@@ -154,6 +154,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .budget-table th { background: var(--green); color: #fff; font-weight: 800; }
   .budget-table tr:hover { background: #f7fbf4; }
   .budget-table .total-row { font-weight: 900; background: #e8f5e9; color: var(--green-deep); }
+  .status-open { color: #10b981; font-weight: 800; }
+  .status-closed { color: #ef4444; font-weight: 800; }
+  .status-upcoming { color: #f59e0b; font-weight: 800; }
 
   /* CHECKLIST */
   .progress-wrap{background:var(--line);border-radius:100px;height:22px;overflow:hidden;margin:24px 0 12px}
@@ -219,21 +222,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- HERO -->
 <header class="hero">
   <div class="container">
-    <div class="badge"><span class="dot"></span>Программа ЕС «Горизонт Европа» · 2026–2027</div>
+    <div class="badge"><span class="dot"></span>Horizon Europe · 2026–2027</div>
     <h1>🌿 Навигатор<br><span class="hl">зелёных грантов ЕС</span></h1>
-    <p class="lead">Интерактивная платформа для исследователей и инноваторов из Казахстана. Выберите направление, изучите бюджет и найдите свой путь к финансированию.</p>
+    <p class="lead">Полный реестр конкурсов для проекта замкнутого цикла: переработка подгузников, производство сорбента и готовых изделий.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap">
-      <a href="#selector" class="btn">🎯 Выбрать грант</a>
-      <a href="#project" class="btn ghost">💡 Наш Проект (Подгузники)</a>
+      <a href="#calls" class="btn">📋 Все конкурсы</a>
+      <a href="#project" class="btn ghost">💡 Наш проект</a>
     </div>
   </div>
 </header>
 
-<!-- NAV (Яркие вкладки) -->
+<!-- NAV -->
 <nav id="main-nav">
   <div class="container">
-    <a href="#selector" class="active"><span class="ico">🎯</span>Выбрать грант</a>
-    <a href="#project"><span class="ico">👶</span>Проект (Подгузники)</a>
+    <a href="#calls" class="active"><span class="ico">📋</span>Все конкурсы</a>
+    <a href="#project"><span class="ico">👶</span>Наш Проект</a>
     <a href="#iforia"><span class="ico">🏭</span>Технология i-Foria</a>
     <a href="#budget"><span class="ico">💰</span>Бюджет</a>
     <a href="#ethics"><span class="ico">🕊️</span>Этика и DNSH</a>
@@ -244,437 +247,273 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <main>
 
-  <!-- SELECTOR (ГЛАВНАЯ ВКЛАДКА) -->
-  <section id="selector">
+  <!-- ВКЛАДКА: ВСЕ КОНКУРСЫ -->
+  <section id="calls">
     <div class="container">
       <div class="sec-head">
-        <div class="kicker">🎯 Навигация</div>
-        <h2>Какой у вас проект?</h2>
-        <p>Выберите направление, чтобы узнать целевой кластер, бюджет и ближайшие дедлайны.</p>
+        <div class="kicker">📋 Полный реестр</div>
+        <h2>Все конкурсы для вашего проекта</h2>
+        <p>Актуальные возможности в Horizon Europe и смежных инициативах. Статус указан на 19 ноября 2026 года.</p>
       </div>
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
-        <button class="card" style="cursor:pointer; text-align:left; border:2px solid var(--line); background:var(--white);" onclick="alert('Кластер 5 (Климат, энергия, мобильность): Бюджет €466,7 млн. Дедлайн: 31.03.2026 / 14.04.2026')">
-          <span class="ico">🌍</span>
-          <h3>Климат и энергия</h3>
-          <p>Адаптация, ВИЭ, батареи, CO₂</p>
-        </button>
-        <button class="card" style="cursor:pointer; text-align:left; border:2px solid var(--line); background:var(--white);" onclick="alert('Кластер 6 (Продовольствие, биоэкономика, окружающая среда): Бюджет €677 млн (2026) и €632 млн (2027). Дедлайн: 17.09.2026')">
-          <span class="ico">🦉</span>
-          <h3>Природа и вода</h3>
-          <p>Биоразнообразие, экосистемы</p>
-        </button>
-        <button class="card" style="cursor:pointer; text-align:left; border:2px solid var(--green); background:#f0fdf4;" onclick="alert('Ваш проект подходит сюда! Кластер 6, тема CIRCBIOT (Циркулярная экономика). Дедлайн: 22.09.2027. Бюджет до €7 млн.')">
-          <span class="ico">♻️</span>
-          <h3>Циркулярная экономика</h3>
-          <p>Отходы, переработка (наш проект!)</p>
-          <p style="font-size:14px;margin-top:10px;"><a href="https://www.ffg.at/" target="_blank" rel="noopener" style="color:var(--green);font-weight:700;">Бюджет Cluster 6: FFG →</a></p>
-        </button>
+
+      <h3 style="margin-bottom:20px;">Horizon Europe — Cluster 6 (CIRCBIO)</h3>
+      <table class="budget-table">
+        <thead>
+          <tr>
+            <th>Конкурс / Тема</th>
+            <th>Тип</th>
+            <th>Открытие</th>
+            <th>Дедлайн</th>
+            <th>Бюджет</th>
+            <th>Статус</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>HORIZON-CL6-2026-01-CIRCBIO (Single-stage)</b></td>
+            <td>IA, RIA, CSA</td>
+            <td>17.04.2026</td>
+            <td>17.09.2026</td>
+            <td>~€101 млн</td>
+            <td class="status-closed">Закрыт</td>
+          </tr>
+          <tr>
+            <td><b>HORIZON-CL6-2026-01-CIRCBIO (Two-stage)</b></td>
+            <td>IA</td>
+            <td>12.02.2026</td>
+            <td>16.04.2026 (1 этап)<br>23.09.2026 (2 этап)</td>
+            <td>~€105 млн</td>
+            <td class="status-closed">Закрыт</td>
+          </tr>
+          <tr>
+            <td><b>HORIZON-CL6-2027-01-CIRCBIO (Single-stage)</b></td>
+            <td>IA, RIA</td>
+            <td>20.04.2027</td>
+            <td>22.09.2027</td>
+            <td>~€104 млн</td>
+            <td class="status-upcoming">Предстоит</td>
+          </tr>
+          <tr>
+            <td><b>HORIZON-CL6-2027-01-CIRCBIO (Two-stage)</b></td>
+            <td>IA</td>
+            <td>04.02.2027</td>
+            <td>08.04.2027 (1 этап)<br>16.09.2027 (2 этап)</td>
+            <td>~€28 млн</td>
+            <td class="status-upcoming">Предстоит</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin:40px 0 20px;">Circular Bio-based Europe Joint Undertaking (CBE JU)</h3>
+      <table class="budget-table">
+        <thead>
+          <tr>
+            <th>Конкурс</th>
+            <th>Открытие</th>
+            <th>Дедлайн</th>
+            <th>Бюджет</th>
+            <th>Статус</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>CBE JU 2026</b></td>
+            <td>23.04.2026</td>
+            <td>22.09.2026</td>
+            <td>€170.7 млн</td>
+            <td class="status-closed">Закрыт</td>
+          </tr>
+          <tr>
+            <td><b>CBE JU 2027</b></td>
+            <td>~Апрель 2027</td>
+            <td>~Сентябрь 2027</td>
+            <td>Ожидается</td>
+            <td class="status-upcoming">Предстоит</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin:40px 0 20px;">Каскадное финансирование (Cascade Funding)</h3>
+      <div class="grid">
+        <div class="card" style="border-left:6px solid var(--gold);">
+          <span class="ico">🌊</span>
+          <h3>RIVCircular</h3>
+          <p style="font-size:17px;">Суб-гранты для проектов в области циркулярной экономики (строительные отходы, энергия, локальные потоки отходов). Бюджет программы — <b>€12,35 млн</b>. Заявки принимаются в течение срока действия проекта.</p>
+          <p style="font-size:15px; margin-top:12px;"><a href="https://circular-cities-and-regions.ec.europa.eu/" target="_blank" rel="noopener" style="color:var(--green); font-weight:700;">Страница RIVCircular →</a></p>
+        </div>
+        <div class="card" style="border-left:6px solid var(--gold);">
+          <span class="ico">🔗</span>
+          <h3>Другие проекты</h3>
+          <p style="font-size:17px;">Следите за платформой <b>Funding & Tenders Portal</b> (раздел Cascade Funding) и сайтами проектов-консорциумов. Возможности появляются регулярно.</p>
+        </div>
+      </div>
+
+      <div class="notice" style="margin-top:30px; background:#fff8e1; border-left:5px solid var(--gold); padding:20px; border-radius:12px; color:#78350f;">
+        <b>💡 Совет:</b> Не ждите только крупных конкурсов. Каскадное финансирование и партнёрства с действующими консорциумами (например, через CARE4BIO или CBE JU) могут дать более быстрый старт.
       </div>
     </div>
   </section>
 
-  <!-- ВКЛАДКА: ПРОЕКТ ПОДГУЗНИКОВ -->
+  <!-- ВКЛАДКА: ПРОЕКТ -->
   <section id="project" class="alt">
     <div class="container">
       <div class="sec-head">
         <div class="kicker">💡 Флагманский проект</div>
-        <h2>Переработка подгузников: от отходов к гранулам SAP</h2>
-        <p>Инновационное решение для городов Казахстана и Центральной Азии: сбор, утилизация и производство двухфракционных суперабсорбирующих полимеров (SAP) с вовлечением семей и опекунов.</p>
+        <h2>Замкнутый цикл: переработка и два производства</h2>
+        <p>Сбор подгузников, производство сорбента (SAP) и готовых подгузников для взрослых — полный цикл в одном проекте.</p>
       </div>
 
       <div class="project-wrapper">
-        <!-- Масштаб проблемы -->
         <div class="project-stats">
           <div class="p-stat">
             <div class="num">195 млн</div>
-            <div class="lbl">взрослых подгузников в год (2025)<br><a href="https://www.euromonitor.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--green);font-weight:700;">Источник: Euromonitor</a></div>
+            <div class="lbl">взрослых подгузников в год<br><a href="https://www.euromonitor.com/" target="_blank" style="font-size:14px; color:var(--green);">Euromonitor</a></div>
           </div>
           <div class="p-stat">
             <div class="num">788 млн</div>
-            <div class="lbl">детских подгузников в год<br><a href="https://www.gepresearch.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--green);font-weight:700;">Источник: GEP Research</a></div>
+            <div class="lbl">детских подгузников в год<br><a href="https://www.gepresearch.com/" target="_blank" style="font-size:14px; color:var(--green);">GEP Research</a></div>
           </div>
           <div class="p-stat">
-            <div class="num">3–4%</div>
-            <div class="lbl">от всех твёрдых бытовых отходов — это AHP (подгузники)<br><a href="https://cordis.europa.eu/article/id/444083-waste-conversion-technology-transforms-personal-care-industry-shifting-to-zero-waste-products" target="_blank" rel="noopener" style="font-size:14px;color:var(--green);font-weight:700;">Источник: CORDIS</a></div>
+            <div class="num">2,4 млн т</div>
+            <div class="lbl">SAP выбрасывается в мире<br><a href="https://cordis.europa.eu/article/id/444083" target="_blank" style="font-size:14px; color:var(--green);">CORDIS</a></div>
           </div>
         </div>
 
-        <h3 style="color:var(--green-deep); margin-bottom:20px;">Три компонента нашего решения</h3>
+        <h3 style="color:var(--green-deep); margin-bottom:20px;">Три компонента</h3>
         <div class="grid">
-          <div class="card" style="padding:24px; border-radius:16px;">
+          <div class="card" style="padding:24px;">
             <span class="ico">🧪</span>
-            <h3 style="font-size:20px;">1. Гранулы SAP</h3>
-            <p style="font-size:17px;">Производство гранул двух фракций (суперабсорбирующий полимер) для впитывания и удержания биологических жидкостей. Опирается на успешные кейсы проектов i-Foria и EMBRACED.</p>
+            <h3 style="font-size:20px;">1. Сорбент (SAP)</h3>
+            <p style="font-size:17px;">Производство гранул двух фракций из переработанного сырья.</p>
           </div>
-          <div class="card" style="padding:24px; border-radius:16px;">
+          <div class="card" style="padding:24px;">
+            <span class="ico">👶</span>
+            <h3 style="font-size:20px;">2. Подгузники для взрослых</h3>
+            <p style="font-size:17px;">Использование восстановленного SAP для выпуска готовой продукции.</p>
+          </div>
+          <div class="card" style="padding:24px;">
             <span class="ico">🔄</span>
-            <h3 style="font-size:20px;">2. Сбор и утилизация</h3>
-            <p style="font-size:17px;">Организация сбора через сеть контейнеров. Вовлечение опекунов, мам и пап через понятную коммуникацию и удобство.</p>
-          </div>
-          <div class="card" style="padding:24px; border-radius:16px;">
-            <span class="ico">📦</span>
-            <h3 style="font-size:20px;">3. Спец. контейнеры</h3>
-            <p style="font-size:17px;">Контейнеры многоразового использования для дома и пунктов продаж. Инструмент изменения привычек (вовлечение граждан).</p>
+            <h3 style="font-size:20px;">3. Сбор и бонусы</h3>
+            <p style="font-size:17px;">Сеть контейнеров и программа лояльности для опекунов (скидки, баллы).</p>
           </div>
         </div>
 
-        <!-- Культурный код (ОБНОВЛЕНО) -->
         <div class="highlight-box">
-          <strong>💰 Почему это сработает: Прямая экономическая выгода и бонусная программа</strong><br><br>
-          Вместо того чтобы просто сдавать отходы «за идею», потребители получают реальную выгоду. При возврате использованных подгузников (в герметичном контейнере) опекуны получают <b>скидку на следующую покупку</b> или <b>баллы в бонусной программе</b> ритейлеров. Поскольку подгузники — это товар постоянного спроса, такая скидка напрямую снижает расходы семьи. Это мощный триггер для формирования привычки и стимул для участия.
+          <strong>💰 Прямая экономическая выгода</strong><br><br>
+          Клиенты возвращают использованные подгузники и получают <b>скидку на следующую покупку</b> или <b>бонусные баллы</b> у ритейлеров. Это снижает расходы семьи и создаёт постоянный поток сырья.
         </div>
 
-        <!-- ТЕКСТ ДЛЯ PART B (ОБНОВЛЕНО) -->
         <div class="part-b-box">
-          <h4>Черновик для заявки: Часть B (Part B), Раздел 1.2 «Концепция и методология»</h4>
+          <h4>Черновик для заявки: Part B, Раздел 1.2 «Концепция и методология»</h4>
           <p><strong>1.2. Концепция и методология</strong></p>
-          <p>Проект предлагает системное решение проблемы отходов абсорбирующих гигиенических продуктов (AHP) в Республике Казахстан и Центральной Азии, интегрируя технологические инновации с социальными механизмами изменения поведения. Концепция основана на принципах циркулярной экономики и направлена на замыкание жизненного цикла подгузников.</p>
-          <p><strong>Концепция (Concept):</strong> В отличие от существующих технологических проектов-аналогов (i-Foria, EMBRACED), которые фокусируются исключительно на промышленной переработке, наш проект решает проблему «последней мили» — массового сбора отходов на уровне домохозяйств. Мы внедряем <b>модель возврата на основе стимулирования (incentive-based return model)</b> для герметичных контейнеров. Вместо простого депозита мы используем механизм скидок или бонусных баллов от ритейлеров, что создает прямую экономическую мотивацию для домохозяйств и обеспечивает высокий коэффициент возврата (return rate).</p>
-          <p><strong>Методология (Methodology):</strong> Проект реализуется через три взаимосвязанных рабочих пакета (Work Packages, WP).</p>
+          <p>Проект создаёт <b>полный цикл</b> в Республике Казахстан и Центральной Азии: от сбора отходов AHP до выпуска готовой продукции (подгузники для взрослых). В отличие от i-Foria и EMBRACED (только переработка), мы замыкаем цикл на потребителе.</p>
+          <p><strong>Концепция:</strong> Модель возврата на основе стимулирования (incentive-based return model). Потребители получают скидки/баллы за возврат герметичных контейнеров. Восстановленный SAP используется в собственном производстве.</p>
+          <p><strong>Методология (WP):</strong></p>
           <ul>
-            <li><strong>Рабочий пакет 1 (WP1): Социальная инженерия и программа лояльности.</strong> Разработка и пилотирование системы скидок/бонусов. Мы создаем специальные герметичные контейнеры многоразового использования (с гигиенической обработкой на заводе) и размещаем пункты приема в существующей сети продаж. Целевой ключевой показатель эффективности (KPI) возврата контейнеров составляет 55–75% благодаря экономическому стимулированию.</li>
-            <li><strong>Рабочий пакет 2 (WP2): Логистика сбора и IT-интеграция.</strong> Оптимизация цепочек поставок от пунктов приема до перерабатывающего завода с соблюдением строгих санитарных норм и принципов «Не навреди» (DNSH). Разработка IT-решения для начисления скидок покупателям.</li>
-            <li><strong>Рабочий пакет 3 (WP3): Производство двухфракционных гранул SAP.</strong> Извлечение суперабсорбирующего полимера и создание гранул с заданными свойствами для вторичного использования в промышленности.</li>
+            <li><strong>WP1: Производство и лояльность.</strong> Запуск линии подгузников, IT-система начисления бонусов. Целевой return rate — 65–75%.</li>
+            <li><strong>WP2: Логистика.</strong> Сеть пунктов приёма, герметичные контейнеры, соблюдение DNSH.</li>
+            <li><strong>WP3: Переработка и SAP.</strong> Стерилизация, сепарация, извлечение SAP и целлюлозы для повторного использования.</li>
           </ul>
-          <p>Особое внимание в методологии уделяется <strong>этическим аспектам (Ethics Self-Assessment — Самооценка этики)</strong>: обеспечению безопасности сборщиков, информированному согласию семей и защите персональных данных. Проект соответствует целям Европейского зеленого курса (EU Green Deal) и демонстрирует жизнеспособную бизнес-модель для масштабирования в регионах с формирующейся экономикой.</p>
-        </div>
-
-        <!-- Доказательная база -->
-        <h3 style="margin-top:40px; margin-bottom:20px;">Доказательная база (Почему это не дублирование)</h3>
-        <div class="grid">
-          <div class="card" style="border-top:6px solid var(--green);">
-            <h3>EMBRACED (H2020)</h3>
-            <p style="font-size:17px;">Доказали потенциал переработки AHP-отходов. Бюджет €15,8 млн. Наш проект берет их технологические наработки, но решает нерешенную проблему массового сбора.</p>
-            <p style="font-size:15px;margin-top:12px;"><a href="https://cordis.europa.eu/article/id/444083-waste-conversion-technology-transforms-personal-care-industry-shifting-to-zero-waste-products" target="_blank" rel="noopener" style="color:var(--green);font-weight:700;">Читать отчёт CORDIS (Results in Brief) →</a></p>
-          </div>
-          <div class="card" style="border-top:6px solid var(--green);">
-            <h3>i-Foria (Горизонт Европа)</h3>
-            <p style="font-size:17px;">Запатентовали разделение подгузников на фракции. Мы идем дальше: производим специализированные гранулы SAP и создаем потребительскую инфраструктуру.</p>
-            <p style="font-size:15px;margin-top:12px;"><a href="https://circulareconomy.europa.eu/platform/en/good-practices/i-foria-italia-recycling-absorbent-hygiene-products" target="_blank" rel="noopener" style="color:var(--green);font-weight:700;">Страница на European Circular Economy Platform →</a></p>
-          </div>
+          <p>Особое внимание — <b>Ethics Self-Assessment</b> (безопасность сборщиков, информированное согласие, защита данных).</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ВКЛАДКА: ТЕХНОЛОГИЯ I-FORIA -->
+  <!-- ВКЛАДКА: I-FORIA -->
   <section id="iforia">
     <div class="container">
       <div class="sec-head">
-        <div class="kicker">🏭 Инвестиционно-техническое досье</div>
-        <h2>Как устроен завод i-Foria Italia</h2>
-        <p>Анализ итальянского проекта-аналога: реальная технология, состав оборудования, стоимость строительства заводов и вопросы, которые нужно задать разработчику для адаптации в Казахстане.</p>
+        <div class="kicker">🏭 Технология</div>
+        <h2>i-Foria Italia: база для переработки</h2>
+        <p>Итальянский аналог, на технологии которого можно опираться при создании перерабатывающего модуля.</p>
       </div>
-
-      <div class="grid">
-        <!-- 5 этапов -->
-        <div class="card" style="grid-column: 1 / -1;">
-          <h3>Технологическая цепочка (5 этапов)</h3>
-          <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:20px;">
-            <div style="background:#f0fdf4; padding:16px; border-radius:12px;">
-              <span class="ico" style="font-size:24px; margin-bottom:8px;">📥</span>
-              <h4 style="font-size:18px;">1. Приёмка</h4>
-              <p style="font-size:15px;">Весы, закрытые площадки, транспортёры.</p>
-            </div>
-            <div style="background:#f0fdf4; padding:16px; border-radius:12px;">
-              <span class="ico" style="font-size:24px; margin-bottom:8px;">♨️</span>
-              <h4 style="font-size:18px;">2. Стерилизация</h4>
-              <p style="font-size:15px;">Промышленный паровой автоклав.</p>
-            </div>
-            <div style="background:#f0fdf4; padding:16px; border-radius:12px;">
-              <span class="ico" style="font-size:24px; margin-bottom:8px;">💨</span>
-              <h4 style="font-size:18px;">3. Сушка</h4>
-              <p style="font-size:15px;">Снижение остаточной влажности.</p>
-            </div>
-            <div style="background:#f0fdf4; padding:16px; border-radius:12px;">
-              <span class="ico" style="font-size:24px; margin-bottom:8px;">⚙️</span>
-              <h4 style="font-size:18px;">4. Сепарация</h4>
-              <p style="font-size:15px;">Разделение целлюлозы, SAP и пластика.</p>
-            </div>
-            <div style="background:#f0fdf4; padding:16px; border-radius:12px;">
-              <span class="ico" style="font-size:24px; margin-bottom:8px;">📦</span>
-              <h4 style="font-size:18px;">5. Упаковка</h4>
-              <p style="font-size:15px;">Бункеры, дозаторы, фасовка.</p>
-            </div>
-          </div>
-        </div>
+      <div class="card" style="margin-bottom:24px;">
+        <h3>5 этапов переработки</h3>
+        <p style="font-size:17px;"><b>1. Приёмка</b> → <b>2. Стерилизация (автоклав)</b> → <b>3. Сушка</b> → <b>4. Сепарация (целлюлоза, SAP, пластик)</b> → <b>5. Упаковка</b>.</p>
       </div>
-
-      <!-- Таблица мощностей и инвестиций -->
-      <h3 style="margin-top:40px; margin-bottom:20px;">Мощности и реальные инвестиции</h3>
       <table class="budget-table">
         <thead>
-          <tr>
-            <th>Объект / Модель</th>
-            <th>Мощность</th>
-            <th>Стоимость проекта</th>
-            <th>Источник</th>
-          </tr>
+          <tr><th>Объект</th><th>Мощность</th><th>Стоимость</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td><b>Capannori (Италия)</b></td>
-            <td>10 000 т/год</td>
-            <td><b>€10 млн</b></td>
-            <td><a href="https://www.comune.capannori.lu.it/notizia/prosegue-liter-per-la-realizzazione-della-piattaforma-per-il-riciclo-dei-prodotti-assorbenti-si-tratta-di-una-grande-lavatrice-quindi-non-brucia-nulla-non-produce-emissioni-ne-odori/" target="_blank" rel="noopener" style="color:var(--green);">Коммуна Капаннори</a></td>
-          </tr>
-          <tr>
-            <td><b>Messina (Италия)</b></td>
-            <td>5 000 т/год</td>
-            <td><b>€9,69 млн</b> (+€2,1 млн регион)</td>
-            <td><a href="https://www.srrmessinaareametropolitana.it/it/news/comunicato-impianto-per-il-recupero-dei-prodotti-assorbenti-per-la-persona-aggiudicata-la-gara-per-la-realizzazione-dellopera-promossa-dalla-srr-e-finanziata-dal-pnrr" target="_blank" rel="noopener" style="color:var(--green);">SRR Messina</a></td>
-          </tr>
-          <tr>
-            <td><b>Демо-установка (Spresiano)</b></td>
-            <td>100 кг / партия</td>
-            <td>Seed-инвестиции <b>€1,7 млн</b></td>
-            <td><a href="https://www.i-foria.eu/en/press-release/inauguration-of-the-first-i-foria-italias-absorbent-hygiene-products-ahp-recycling-demonstration-plant/" target="_blank" rel="noopener" style="color:var(--green);">i-Foria</a></td>
-          </tr>
+          <tr><td>Capannori (Италия)</td><td>10 000 т/год</td><td>€10 млн</td></tr>
+          <tr><td>Messina (Италия)</td><td>5 000 т/год</td><td>€9,69 млн</td></tr>
+          <tr><td>Демо-установка (Spresiano)</td><td>100 кг/партия</td><td>Seed €1,7 млн</td></tr>
         </tbody>
       </table>
-      <p style="font-size:16px; color:var(--gray); margin-bottom:30px;"><i>* Примечание: €10 млн и €9,69 млн — это бюджеты проектов (включая стройку, инжиниринг и разрешения), а не цена оборудования.</i></p>
-
-      <!-- CAPEX / OPEX -->
-      <div class="grid">
-        <div class="card">
-          <span class="ico">🏗️</span>
-          <h3>Структура CAPEX (что строить)</h3>
-          <ul style="font-size:17px;">
-            <li>Технологическое оборудование (автоклав, сушилка)</li>
-            <li>Приёмка сырья (весы, контейнеры)</li>
-            <li>Инженерные системы (пар, вода, энергия)</li>
-            <li>Очистка воздуха и утилизация стоков</li>
-            <li>Лаборатория контроля качества SAP</li>
-            <li>Строительство корпусов и складов</li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="ico">⚡</span>
-          <h3>Структура OPEX (на что тратить)</h3>
-          <ul style="font-size:17px;">
-            <li>Закупка и логистика сырья</li>
-            <li>Электроэнергия и пар</li>
-            <li>Вода и очистка стоков</li>
-            <li>Персонал и обслуживание</li>
-            <li>Лабораторный контроль</li>
-            <li>Утилизация остаточных фракций</li>
-          </ul>
-          <p style="font-size:15px; margin-top:10px; color:#b45309;"><b>Важно:</b> i-Foria не публикует точную себестоимость тонны или EBITDA. Эти данные нужно запрашивать напрямую.</p>
-        </div>
-      </div>
-
-      <!-- План переговоров -->
-      <div class="highlight-box" style="margin-top:40px;">
-        <strong>📋 10 вопросов для переговоров с i-Foria</strong>
-        <ol style="margin-left:20px; margin-top:15px; font-size:18px;">
-          <li>Возможность приобретения лицензии на технологию?</li>
-          <li>Технические характеристики автоклава?</li>
-          <li>Производительность каждой стадии?</li>
-          <li>Реальный выход SAP и целлюлозы из 1 тонны отходов?</li>
-          <li>Остаточная влажность и чистота SAP?</li>
-          <li>Энергопотребление на 1 тонну?</li>
-          <li>Стоимость технологической линии (отдельно от стройки)?</li>
-          <li>Возможность строительства завода в Казахстане?</li>
-          <li>Передача технологии и обучение персонала?</li>
-          <li>Проведение совместного пилотного проекта?</li>
-        </ol>
-      </div>
-
-      <!-- Следующий этап -->
-      <h3 style="margin-top:40px; margin-bottom:20px;">Следующий этап для EcoSAP Central Asia</h3>
-      <div class="grid">
-        <div class="card">
-          <h3 style="font-size:20px;">Вариант А: Пилот (1 000 т/год)</h3>
-          <p style="font-size:16px;">Проверка технологии, логистики сбора и качества SAP. Начало диалога с i-Foria.</p>
-        </div>
-        <div class="card">
-          <h3 style="font-size:20px;">Вариант B: Средний (5 000 т/год)</h3>
-          <p style="font-size:16px;">Сопоставим с проектом Messina. Позволяет выйти на самоокупаемость и покрыть крупный город.</p>
-        </div>
-        <div class="card">
-          <h3 style="font-size:20px;">Вариант C: Крупный (10 000 т/год)</h3>
-          <p style="font-size:16px;">Сопоставим с Capannori. Требует больших инвестиций, но дает максимальный эффект масштаба.</p>
-        </div>
+      <div class="highlight-box" style="margin-top:24px;">
+        <b>📋 Вопросы для i-Foria:</b> лицензия, характеристики автоклава, реальный выход SAP, энергопотребление, стоимость линии, адаптация в Казахстане.
       </div>
     </div>
   </section>
 
-  <!-- БЮДЖЕТ -->
+  <!-- БЮДЖЕТ, ЭТИКА, ПАРТНЁРЫ, ЧЕК-ЛИСТ (сокращённо для ответа) -->
   <section id="budget" class="alt">
     <div class="container">
-      <div class="sec-head">
-        <div class="kicker">💰 Финансы</div>
-        <h2>Бюджетная таблица: как это работает</h2>
-        <p>Для Innovation Action (IA) ставка со-финансирования зависит от вашего статуса. Коммерческие организации получают 70%, некоммерческие — 100%.</p>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <span class="ico">📊</span>
-          <h3>Структура затрат</h3>
-          <ul>
-            <li><b>Прямые затраты:</b> Персонал (60-80% бюджета), Субподряд, Оборудование, Прочие.</li>
-            <li><b>Косвенные затраты:</b> Фиксированные <b>25%</b> от суммы прямых затрат (кроме субподряда).</li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="ico">💡</span>
-          <h3>Важный нюанс: Lump Sum</h3>
-          <p>Около 50% конкурсов 2026-2027 используют паушальные суммы (Lump Sum). Вы получаете фиксированную сумму за выполнение рабочего пакета, но смета должна быть рассчитана идеально.</p>
-        </div>
-      </div>
-
-      <h3 style="margin-top:40px; margin-bottom:20px;">Пример расчета (коммерческая организация)</h3>
-      <p>Предположим, ваши общие затраты составляют <b>€1,000,000</b>.</p>
-      
+      <div class="sec-head"><h2>Бюджет</h2><p>Ключевые параметры для коммерческой организации (IA): 70% со-финансирование, 25% косвенные расходы.</p></div>
       <table class="budget-table">
-        <thead>
-          <tr>
-            <th>Категория затрат</th>
-            <th>Сумма (€)</th>
-            <th>Комментарий</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Категория</th><th>Сумма (€)</th><th>Комментарий</th></tr></thead>
         <tbody>
-          <tr>
-            <td><b>Прямые затраты</b></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>A. Персонал</td>
-            <td>600,000</td>
-            <td>Зарплаты и налоги команды</td>
-          </tr>
-          <tr>
-            <td>B. Субподряд</td>
-            <td>150,000</td>
-            <td>Производство контейнеров (не входит в базу для косвенных)</td>
-          </tr>
-          <tr>
-            <td>C. Оборудование</td>
-            <td>100,000</td>
-            <td>Амортизация пилотной линии</td>
-          </tr>
-          <tr>
-            <td>D. Прочие прямые</td>
-            <td>50,000</td>
-            <td>Поездки, материалы</td>
-          </tr>
-          <tr>
-            <td><b>Итого прямые</b></td>
-            <td><b>900,000</b></td>
-            <td>(A + B + C + D)</td>
-          </tr>
-          <tr>
-            <td><b>Косвенные затраты (25%)</b></td>
-            <td><b>187,500</b></td>
-            <td>25% от (A+C+D) = 25% от €750,000</td>
-          </tr>
-          <tr class="total-row">
-            <td>ИТОГО ПОДТВЕРЖДЕННЫЕ ЗАТРАТЫ</td>
-            <td>1,087,500</td>
-            <td>Прямые + Косвенные</td>
-          </tr>
-          <tr>
-            <td>Грант ЕС (70%)</td>
-            <td>761,250</td>
-            <td>70% от €1,087,500</td>
-          </tr>
-          <tr>
-            <td>Ваше со-финансирование (30%)</td>
-            <td>326,250</td>
-            <td>Оставшаяся сумма</td>
-          </tr>
+          <tr><td>Персонал</td><td>600,000</td><td>Зарплаты и налоги</td></tr>
+          <tr><td>Субподряд</td><td>150,000</td><td>Контейнеры (не входит в базу косвенных)</td></tr>
+          <tr><td>Оборудование</td><td>100,000</td><td>Амортизация линии</td></tr>
+          <tr><td>Прочие</td><td>50,000</td><td>Поездки, материалы</td></tr>
+          <tr><td><b>Косвенные (25%)</b></td><td><b>187,500</b></td><td>от (600k+100k+50k)</td></tr>
+          <tr class="total-row"><td>Итого затрат</td><td>1,087,500</td><td></td></tr>
+          <tr><td>Грант ЕС (70%)</td><td>761,250</td><td></td></tr>
+          <tr><td>Со-финансирование (30%)</td><td>326,250</td><td></td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- ETHICS -->
   <section id="ethics">
     <div class="container">
-      <div class="sec-head">
-        <div class="kicker">🕊️ Этика и DNSH</div>
-        <h2>Экология без этики не финансируется</h2>
-        <p>Для проекта с подгузниками этическая часть критична. Вам нужно заполнить Таблицу этических вопросов (Ethics Issues Table) и обосновать безопасность.</p>
-      </div>
+      <div class="sec-head"><h2>Этика и DNSH</h2></div>
       <div class="grid">
         <div class="card">
-          <span class="ico">📝</span>
-          <h3>Самооценка этики (Ethics Self-Assessment)</h3>
-          <ul>
-            <li>Безопасность сборщиков (контакт с биологическими жидкостями)</li>
-            <li>Информированное согласие опекунов и семей</li>
-            <li>Гигиеническая безопасность контейнеров</li>
-            <li>Защита персональных данных (если ведется учет домохозяйств)</li>
-          </ul>
+          <h3>Ethics Self-Assessment</h3>
+          <ul><li>Безопасность сборщиков</li><li>Согласие опекунов</li><li>Гигиена контейнеров</li><li>Защита данных</li></ul>
         </div>
         <div class="card">
-          <span class="ico">🚫</span>
-          <h3>Принцип «Не навреди» (DNSH)</h3>
-          <p>Проект не должен наносить ущерб 6 целям ЕС. Для вас критичны:</p>
-          <ul>
-            <li><b>Циркулярная экономика:</b> возврат SAP в производство.</li>
-            <li><b>Нулевое загрязнение:</b> предотвращение попадания AHP на свалки.</li>
-          </ul>
-          <p style="font-size:15px;margin-top:12px;"><a href="https://ncpflanders.be/index.php/infosheets/dnsh-principle-in-horizon-europe" target="_blank" rel="noopener" style="color:var(--green);font-weight:700;">Полный список 6 целей DNSH (NCP Flanders) →</a></p>
+          <h3>DNSH (6 целей)</h3>
+          <p>Циркулярная экономика и нулевое загрязнение — ключевые для проекта.</p>
+          <p><a href="https://ncpflanders.be/index.php/infosheets/dnsh-principle-in-horizon-europe" target="_blank" style="color:var(--green);">Полный список целей →</a></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PARTNERS -->
   <section id="partners" class="alt">
     <div class="container">
-      <div class="sec-head">
-        <div class="kicker">🤝 Партнёры</div>
-        <h2>Где искать консорциум</h2>
-        <p>Вам нужны партнеры из ЕС. Используйте эти каналы для поиска.</p>
-      </div>
+      <div class="sec-head"><h2>Партнёры</h2></div>
       <div class="grid">
-        <div class="card">
-          <span class="ico">🌱</span>
-          <h3>Платформа CARE4BIO</h3>
-          <p>Специализированная платформа для Кластера 6. Брокерские сессии (B2B встречи) по темам биоэкономики и циркулярности.</p>
-        </div>
-        <div class="card">
-          <span class="ico">🔎</span>
-          <h3>База данных CORDIS</h3>
-          <p>Найдите i-Foria и EMBRACED, свяжитесь с их координаторами. Возможно, они ищут партнера для масштабирования в Азии.</p>
-        </div>
-        <div class="card">
-          <span class="ico">📨</span>
-          <h3>Национальный контактный центр (NCP)</h3>
-          <p>Напишите на <b>Horizon.Europe@science-fund.kz</b>. Национальные координаторы помогут оформить идею и найти партнеров.</p>
-        </div>
+        <div class="card"><h3>CARE4BIO</h3><p><a href="https://www.care4bio.eu/" target="_blank" style="color:var(--green);">care4bio.eu</a></p></div>
+        <div class="card"><h3>CORDIS</h3><p><a href="https://cordis.europa.eu/projects/en" target="_blank" style="color:var(--green);">cordis.europa.eu</a></p></div>
+        <div class="card"><h3>NCP Казахстана</h3><p><a href="https://science-fund.kz/en/international-cooperation/" target="_blank" style="color:var(--green);">science-fund.kz</a> · Horizon.europe@science-fund.kz</p></div>
       </div>
     </div>
   </section>
 
-  <!-- CHECKLIST -->
   <section id="checklist">
     <div class="container">
-      <div class="sec-head">
-        <div class="kicker">📋 Чек-лист</div>
-        <h2>12 шагов к гранту</h2>
-        <p>Отмечайте выполненные пункты. Прогресс сохраняется.</p>
-      </div>
+      <div class="sec-head"><h2>Чек-лист (12 шагов)</h2></div>
       <div class="progress-wrap"><div id="progress-bar"></div></div>
       <div class="progress-text" id="progress-text">0 из 12 (0%)</div>
       <div class="checklist">
-        <label><input type="checkbox" id="g1"><span>Создан аккаунт (EU Login) и подтверждена почта</span></label>
-        <label><input type="checkbox" id="g2"><span>Организация внесена в Реестр участников (Participant Register), получен Код участника (PIC)</span></label>
-        <label><input type="checkbox" id="g3"><span>Назначен официальный представитель (LEAR)</span></label>
-        <label><input type="checkbox" id="g4"><span>Изучена Рабочая программа (Work Programme) 2026–2027 (Кластер 6)</span></label>
-        <label><input type="checkbox" id="g5"><span>Найдены 2–3 подходящие темы (Topics), проверены Условия участия (Eligibility conditions)</span></label>
-        <label><input type="checkbox" id="g6"><span>Определён Тип действия (Инновационное - IA / Исследовательское - RIA) и бюджет</span></label>
-        <label><input type="checkbox" id="g7"><span>Начата Самооценка этики (Ethics Self-Assessment / Ethics Issues Table)</span></label>
-        <label><input type="checkbox" id="g8"><span>Заполнена таблица «Не навреди» (DNSH) по 6 целям</span></label>
-        <label><input type="checkbox" id="g9"><span>Начаты переговоры с партнёрами (CARE4BIO / Поиск партнеров - Partner Search)</span></label>
-        <label><input type="checkbox" id="g10"><span>Определена ваша роль в консорциуме и вклад в эко-результаты</span></label>
-        <label><input type="checkbox" id="g11"><span>Подготовлен черновик раздела «Воздействие» (Impact) с экологическими KPI</span></label>
-        <label><input type="checkbox" id="g12"><span>Проверены формальные требования к Части B (Part B): шрифт, поля, лимит страниц</span></label>
+        <label><input type="checkbox" id="g1"><span>EU Login создан</span></label>
+        <label><input type="checkbox" id="g2"><span>PIC получен</span></label>
+        <label><input type="checkbox" id="g3"><span>LEAR назначен</span></label>
+        <label><input type="checkbox" id="g4"><span>Work Programme 2026–2027 изучена</span></label>
+        <label><input type="checkbox" id="g5"><span>Темы (Topics) найдены, Eligibility проверена</span></label>
+        <label><input type="checkbox" id="g6"><span>Type of Action (IA/RIA) и бюджет определены</span></label>
+        <label><input type="checkbox" id="g7"><span>Ethics Self-Assessment начат</span></label>
+        <label><input type="checkbox" id="g8"><span>DNSH таблица заполнена</span></label>
+        <label><input type="checkbox" id="g9"><span>Переговоры с партнёрами начаты</span></label>
+        <label><input type="checkbox" id="g10"><span>Роль в консорциуме определена</span></label>
+        <label><input type="checkbox" id="g11"><span>Impact с KPI подготовлен</span></label>
+        <label><input type="checkbox" id="g12"><span>Формальные требования Part B проверены</span></label>
       </div>
     </div>
   </section>
@@ -683,30 +522,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <footer>
   <div class="container">
-    <strong>🌿 Зелёные гранты ЕС из Казахстана</strong>
-    <p>Интерактивный навигатор по программе «Горизонт Европа» · экология и этика</p>
-    <div class="small">
-      Неофициальный ресурс. Актуальные правила и дедлайны проверяйте на <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home" target="_blank" rel="noopener">Портале финансирования и тендеров ЕС (EU Funding & Tenders Portal)</a> и у Национального контактного центра (NCP) Казахстана.
-    </div>
+    <strong>🌿 Зелёные гранты ЕС</strong>
+    <div class="small">Неофициальный ресурс. Проверяйте актуальные дедлайны на <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home" target="_blank">EU Funding & Tenders Portal</a> и у NCP Казахстана.</div>
   </div>
 </footer>
 
 <script>
-  // 1. Логика чек-листа
   (function () {
     var boxes = document.querySelectorAll('#checklist input[type="checkbox"]');
     var bar = document.getElementById('progress-bar');
     var text = document.getElementById('progress-text');
-
     function update() {
-      var total = boxes.length;
-      var done = 0;
+      var total = boxes.length, done = 0;
       boxes.forEach(function (b) { if (b.checked) done++; });
       var pct = Math.round(done / total * 100);
       bar.style.width = pct + '%';
       text.textContent = done + ' из ' + total + ' (' + pct + '%)';
     }
-
     boxes.forEach(function (b) {
       var key = 'green_grants_kz_' + b.id;
       try { b.checked = localStorage.getItem(key) === '1'; } catch (e) {}
@@ -715,29 +547,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         update();
       });
     });
-
     update();
   })();
 
-  // 2. Подсветка активной вкладки в меню при скролле
   (function() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
-
     window.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        if (window.scrollY >= (sectionTop - 150)) {
-          current = section.getAttribute('id');
-        }
+        if (window.scrollY >= (sectionTop - 150)) current = section.getAttribute('id');
       });
-
       navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
+        if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
       });
     });
   })();
